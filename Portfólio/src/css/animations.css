@@ -1,0 +1,230 @@
+/* Animações Hard Skills */
+.progress-bar-c {
+    background-color: #8EB9E5 !important;
+    /* animation-name: barra1 !important; */
+    animation-duration: 2s !important;
+    /* animation-delay: 2s !important; */
+    animation-fill-mode: forwards !important;
+    width: 0%;
+} 
+
+@keyframes barra1{
+    from{width: 0% ;}
+    to  {width: 70% ;}
+} 
+
+@keyframes barra13{
+    from{width: 70% ;}
+    to  {width: 0% ;}
+} 
+
+.progress-bar-html {
+    background-color: #8EB9E5 !important;
+    /* animation-name: barra2 !important; */
+    animation-duration: 2s !important;
+    /* animation-delay: 2s !important; */
+    animation-fill-mode: forwards !important;
+    width: 0%;
+} 
+
+@keyframes barra2{
+    from{width: 0% ;}
+    to  {width: 60% ;}
+} 
+
+@keyframes barra14{
+    from{width: 60% ;}
+    to  {width: 0% ;}
+} 
+
+.progress-bar-sql {
+    background-color: #8EB9E5 !important;
+    /* animation-name: barra3 !important; */
+    animation-duration: 2s !important;
+    /* animation-delay: 2s !important; */
+    animation-fill-mode: forwards !important;
+    width: 0%;
+} 
+
+@keyframes barra3{
+    from{width: 0% ;}
+    to  {width: 70% ;}
+} 
+
+@keyframes barra15{
+    from{width: 70% ;}
+    to  {width: 0% ;}
+} 
+
+.progress-bar-redes {
+    background-color: #8EB9E5 !important;
+    /* animation-name: barra4 !important; */
+    animation-duration: 2s !important;
+    /* animation-delay: 2s !important; */
+    animation-fill-mode: forwards !important;
+    width: 0%;
+} 
+
+@keyframes barra4{
+    from{width: 0% ;}
+    to  {width: 70% ;}
+} 
+
+@keyframes barra16{
+    from{width: 70% ;}
+    to  {width: 0% ;}
+} 
+
+.progress-bar-logica {
+    background-color: #8EB9E5 !important;
+    /* animation-name: barra5 !important; */
+    animation-duration: 2s !important;
+    /* animation-delay: 2s !important; */
+    animation-fill-mode: forwards !important;
+    width: 0%;
+} 
+
+@keyframes barra5{
+    from{width: 0% ;}
+    to  {width: 80% ;}
+}
+
+@keyframes barra17{
+    from{width: 80% ;}
+    to  {width: 0% ;}
+}
+
+.progress-bar-online {
+    background-color: #8EB9E5 !important;
+    /* animation-name: barra6 !important; */
+    animation-duration: 2s !important;
+    /* animation-delay: 2s !important; */
+    animation-fill-mode: forwards !important;
+    width: 0%;
+} 
+
+@keyframes barra6{
+    from{width: 0% ;}
+    to  {width: 90% ;}
+}
+
+@keyframes barra18{
+    from{width: 90% ;}
+    to  {width: 0% ;}
+}
+
+/* Animações Soft Skills */
+
+.progress-bar-empatia {
+    background-color: #8EB9E5 !important;
+    /* animation-name: barra7 !important; */
+    animation-duration: 2s !important;
+    /* animation-delay: 2s !important; */
+    animation-fill-mode: forwards !important;
+    width: 0%;
+} 
+
+@keyframes barra7{
+    from{width: 0% ;}
+    to  {width: 90% ;}
+}
+
+@keyframes barra19{
+    from{width: 90% ;}
+    to  {width: 0% ;}
+}
+
+.progress-bar-equipe {
+    background-color: #8EB9E5 !important;
+    /* animation-name: barra8 !important; */
+    animation-duration: 2s !important;
+    /* animation-delay: 2s !important; */
+    animation-fill-mode: forwards !important;
+    width: 0%;
+} 
+
+@keyframes barra8{
+    from{width: 0% ;}
+    to  {width: 80% ;}
+}
+
+@keyframes barra20{
+    from{width: 80% ;}
+    to  {width: 0% ;}
+}
+
+.progress-bar-comunicacao {
+    background-color: #8EB9E5 !important;
+    /* animation-name: barra9 !important; */
+    animation-duration: 2s !important;
+    /* animation-delay: 2s !important; */
+    animation-fill-mode: forwards !important;
+    width: 0%;
+} 
+
+@keyframes barra9{
+    from{width: 0% ;}
+    to  {width: 80% ;}
+}
+
+@keyframes barra21{
+    from{width: 80% ;}
+    to  {width: 0% ;}
+}
+
+.progress-bar-planejamento {
+    background-color: #8EB9E5 !important;
+    /* animation-name: barra10 !important; */
+    animation-duration: 2s !important;
+    /* animation-delay: 2s !important; */
+    animation-fill-mode: forwards !important;
+    width: 0%;
+} 
+
+@keyframes barra10{
+    from{width: 0% ;}
+    to  {width: 90% ;}
+}
+
+@keyframes barra22{
+    from{width: 90% ;}
+    to  {width: 0% ;}
+}
+
+.progress-bar-res {
+    background-color: #8EB9E5 !important;
+    /* animation-name: barra11 !important; */
+    animation-duration: 2s !important;
+    /* animation-delay: 2s !important; */
+    animation-fill-mode: forwards !important;
+    width: 0%;
+} 
+
+@keyframes barra11{
+    from{width: 0% ;}
+    to  {width: 90% ;}
+}
+
+@keyframes barra23{
+    from{width: 90% ;}
+    to  {width: 0% ;}
+}
+
+.progress-bar-disciplina {
+    background-color: #8EB9E5 !important;
+    /* animation-name: barra12 !important; */
+    animation-duration: 2s !important;
+    /* animation-delay: 2s !important; */
+    animation-fill-mode: forwards !important;
+    width: 0%;
+} 
+
+@keyframes barra12{
+    from{width: 0% ;}
+    to  {width: 90% ;}
+}
+
+@keyframes barra24{
+    from{width: 90% ;}
+    to  {width: 0% ;}
+}

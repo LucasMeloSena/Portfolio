@@ -1,0 +1,110 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Sena</title>
+    <link rel="stylesheet" href="/src/css/global.css">
+    <link rel="stylesheet" href="/src/css/contato.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/src/css/responsive.css">
+
+    <link rel="shortcut icon" href="/img/iconLogo1.png" type="image/x-icon">
+</head>
+<body>
+    <!--Header-->
+    <header>
+
+      <!--Cabeçalho(BOOTSTRAP)-->
+      <nav class="navbar navbar-expand-lg bg-light" id="navegacao">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="logo"><h1 id="lucas">luca<span id="s">s</span>ena</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav" id="subtitulos">
+                <a onclick="color1()" class="nav-link active" aria-current="page" href="/index.html"><h4 class="paginas" id="home">HOME</h4></a>
+                <a onclick="color2()" class="nav-link" href="/index.html"><h4 class="paginas" id="about">ABOUT</h4></a>
+                <a onclick="color3()" class="nav-link" href="/index.html"><h4 class="paginas" id="portfolio">PORTFÓLIO</h4></a>
+                <a onclick="color4()" class="nav-link" href="#"><h4 class="paginas" id="contato">CONTATO</h4></a>
+              </div>
+            </div>
+          </div>
+        </nav>
+  
+          <div>
+            <img class="img-fluid" id="fundo" src="/img/background2.png" alt="">
+          </div>
+  
+          <div id="agrupamento">
+              <div id="transparente">
+                  <h4 class="me" id="este">ESTE SOU EU</h4>
+                  <h1 id="sena">LUCAS SENA</h1>
+                  <h4 class="me">DEV. FULL STACK JÚNIOR</h4>
+                  <h5 id="especializacao">Especialização em: Desenvolvimento Mobile (IOS e Android)</h5>
+                  <button id="projetos">Explorar Projetos</button>
+              </div>
+  
+              <div id="espacamento">
+                  <div id="experiencia">
+                    <h1 id="two">2 <span id="pype">|</span></h1>
+                    <h4 id="anos">Anos de experiência</h4>
+                  </div>
+                  
+  
+                  <div id="redes-sociais">
+                    <a href="https://twitter.com/lucasmelosena" target="_blank"><div id="fundo-twitter"><i class="fa-brands fa-twitter"></i></div></a>
+                    <a href="https://github.com/LucasMeloSena" target="_blank"><div id="fundo-github"><i class="fa-brands fa-github"></i></div></a>
+                    <a href="https://www.linkedin.com/in/lucas-sena-282311234/" target="_blank"><div id="fundo-linkedin"><i class="fa-brands fa-linkedin-in"></i></div></a>
+                  </div>
+              </div>
+          </div>  
+  
+      </header>
+
+        <!--Conteúdo principal-->
+        <main>
+            <div id="form">
+                <div id="saudacao">
+                    <h1 id="hello">Hello!</h1>
+                    <h4 id="please">Por favor, preencha os campos a seguir para continuar.</h4>
+                </div>
+
+                <form action="/src/php/data.php" method="post">
+                  <h4 class="titulos">Nome:</h4>
+                  <input type="text" class="textbox" id="nome" name="nome" required autofocus maxlength="35">
+
+                  <h4 class="titulos">Email:</h4>
+                  <input type="email" class="textbox" id="email" name="email" required maxlength="35">
+
+                  <h4 class="titulos">Celular:</h4>
+                  <input type="tel" class="textbox" id="celular" name="celular" required oninput="mascara()">
+
+                  <h4 class="titulos">Mensagem:</h4>
+                  <textarea id="mensagem" cols="30" rows="10" name="mensagem" maxlength="500" required></textarea>
+
+                  <input type="submit" value="ENVIAR" id="send">
+                </form>
+                
+            </div>
+
+            <div id="background2">
+              <h1 class="lucas">luca<span id="s">s</span>ena</h1>
+            </div>
+        </main>
+
+<!--Funções-->
+<script src="/script.js"></script>
+<!--Funções-->
+<script src="/src/js/contact.js"></script>
+<!--Kit Font Awesome-->
+<script src="https://kit.fontawesome.com/cc220553ac.js" crossorigin="anonymous"></script>
+<!-- CSS Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!--Script Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</body>
+</html>
