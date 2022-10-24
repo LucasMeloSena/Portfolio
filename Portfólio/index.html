@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
+<html lang="pt-br">
 <head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,8 +43,8 @@
             <div id="transparente">
                 <h4 class="me" id="este">ESTE SOU EU</h4>
                 <h1 id="sena">LUCAS SENA</h1>
-                <h4 class="me">DEV. FULL STACK JÚNIOR</h4>
-                <h5 id="especializacao">Especialização em: Desenvolvimento Mobile (IOS e Android)</h5>
+                <!-- <h4 class="me">DEV. FULL STACK JÚNIOR</h4>
+                <h5 id="especializacao">Especialização em: Desenvolvimento Mobile (IOS e Android)</h5> -->
                 <button id="projetos">Explorar Projetos</button>
             </div>
 
@@ -78,14 +78,39 @@
             trabalha as habilidades cognitivas e aumenta a coordenação do cérebro e do corpo. <br>
             Busco também adquirir, aplicar e aprimorar meus conhecimentos na área de TI que é <br>
             muito abrangente e está em constante evolução. Procuro aperfeiçoar minhas Soft Skills <br>
-            a cada dia, e me considero uma pessoa disciplinada, responsável e dedicada.</h4>
+            a cada dia, e me considero uma pessoa disciplinada, responsável e dedicada.
+          </h4>
+  
+          <h1 class="especializacao">Especialização em:</h1>
+          <ul id="space">
+            <li class="especialidades">Desenvolvimento Mobile (Android e IOS) </li>
+            <li class="especialidades">Desenvolvimento Web (Full-Stack)</li>
+          </ul>
+
           <a href="doc/Currículo Geral - Lucas Sena.pdf" download="Currículo Geral.pdf"><button id="btnCurriculo">Download Currículo <i class="fa-solid fa-download"></i> </button></a>
         </div>
-        <div id="picture">
-          <img src="img/blob2.svg" id="blob-blue">
-          <!-- <img src="img/eu.png" id="eu"> -->
-        </div>
-        
+      
+        <!--Blob-->
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="svg">
+          <mask id="mask" mask-type="alpha">
+            <path
+            d="M42.9,-28C54.1,-5.5,60.5,16.6,52.5,32.4C44.6,48.3,22.3,58,-2.4,59.4C-27.2,60.8,-54.4,53.9,-68.6,34.4C-82.9,14.9,-84.3,-17.3,-70.8,-41.3C-57.2,-65.2,-28.6,-80.9,-6.3,-77.2C15.9,-73.6,31.8,-50.5,42.9,-28Z" 
+            transform="translate(100 100)"
+            ></path>
+          </mask>
+          <g mask="url(#mask)">
+            <path
+            d="M42.9,-28C54.1,-5.5,60.5,16.6,52.5,32.4C44.6,48.3,22.3,58,-2.4,59.4C-27.2,60.8,-54.4,53.9,-68.6,34.4C-82.9,14.9,-84.3,-17.3,-70.8,-41.3C-57.2,-65.2,-28.6,-80.9,-6.3,-77.2C15.9,-73.6,31.8,-50.5,42.9,-28Z" 
+            transform="translate(100 100)"
+            ></path>
+            <image
+              class="svg_mask"
+              x="-10"
+              y="10"
+              xlink:href="img/eu4.png"
+            ></image>
+          </g>
+        </svg>
       </section>
 
       <section id="secao2">
@@ -397,7 +422,49 @@
           <h1 class="detalhes-pessoais">AVALIÇÕES DOS MEUS CLIENTES</h1>
         </div>
 
-        <div id="avaliacoes">
+        <!--Avaliações com carrousel-->
+        <div id="sub8" class="container">
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="img/Group 1.png" class="block">
+                <img src="img/Group 2.png" class="none">
+                <div class="carousel-caption d-none d-md-block">
+                  <!--Texto-->
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/Group 1.png" class="block">
+                <img src="img/Group 2.png" class="none">
+                <div class="carousel-caption d-none d-md-block">
+                  <!--Texto-->
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/Group 1.png" class="block">
+                <img src="img/Group 2.png" class="none">
+                <div class="carousel-caption d-none d-md-block">
+                  <!--Texto-->
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- <div id="avaliacoes">
           <div id="white2">
             <i class="fa-solid fa-quote-left"></i>
             <p class="comentario">Lorem Ipsum is simply dummy text of <br>
@@ -412,41 +479,43 @@
                 </div> 
               </div>
           </div>
-        </div>
+        </div> -->
 
       </section>
-
     </main>
 
-    <footer>
-      <img id="rodape" src="img/background2.png">
 
-      <div id="rodape-alinhamento">
-        <div>
-          <h2 class="rodape-titulo">LOREM IPSUM</h2>
-          <p class="rodape-descricao">Lorem Ipsum is simply dummy text of the <br> printing and typesetting 
-            industry. </p>
-        </div>
-  
-        <div>
-          <h2 class="rodape-titulo">LINKS RÁPIDOS</h2>
-          <h4 class="links">Home</h4>
-          <h4 class="links">About</h4>
-          <h4 class="links">Portfólio</h4>
-          <h4 class="links">Contato</h4>
-        </div>
-  
-        <div>
-          <h2 class="rodape-titulo">REDES SOCIAIS</h2>
-          <div id="redes-sociais2">
-            <a href="https://twitter.com/lucasmelosena" target="_blank"><div id="fundo-twitter"><i class="fa-brands fa-twitter"></i></div></a>
-            <a href="https://github.com/LucasMeloSena" target="_blank"><div id="fundo-github"><i class="fa-brands fa-github"></i></div></a>
-            <a href="https://www.linkedin.com/in/lucas-sena-282311234/" target="_blank"><div id="fundo-linkedin"><i class="fa-brands fa-linkedin-in"></i></div></a>
+    <!--Rodapé-->
+    <footer id="rodape">
+      <h1 id="lucasena">luca<span id="s2">s</span>ena</h1>    
+
+        <div id="rodape-alinhamento">
+          <div class="correct">
+            <h2 class="rodape-titulo">LOREM IPSUM</h2>
+            <p class="rodape-descricao">Lorem Ipsum is simply dummy text <br> of the printing and typesetting 
+              industry. </p>
           </div>
-        </div>
-      </div> 
-
-      <p id="dados-autorais">Copyright ©2022 All rights reserved | This Web Site was made by Lucas Sena</p>
+    
+          <div class="correct">
+            <h2 class="rodape-titulo">LINKS RÁPIDOS</h2>
+            <h4 class="links">Home</h4>
+            <h4 class="links">About</h4>
+            <h4 class="links">Portfólio</h4>
+            <h4 class="links">Contato</h4>
+          </div>
+    
+          <div class="correct">
+            <h2 class="rodape-titulo">REDES SOCIAIS</h2>
+            <div id="redes-sociais2">
+              <a href="https://twitter.com/lucasmelosena" target="_blank"><div id="fundo-twitter"><i class="fa-brands fa-twitter"></i></div></a>
+              <a href="https://github.com/LucasMeloSena" target="_blank"><div id="fundo-github"><i class="fa-brands fa-github"></i></div></a>
+              <a href="https://www.linkedin.com/in/lucas-sena-282311234/" target="_blank"><div id="fundo-linkedin"><i class="fa-brands fa-linkedin-in"></i></div></a>
+            </div>
+          </div>
+        </div> 
+  
+        <p id="dados-autorais">Copyright ©2022 All rights reserved <br> This Web Site was made by Lucas Sena</p>
+      
     </footer>
 
 

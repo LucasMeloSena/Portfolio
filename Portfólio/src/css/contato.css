@@ -8,6 +8,14 @@
     color: #12253B !important;
 }
 
+@media screen and (max-width: 425px)
+{
+    #home {
+        font-weight: 400;
+        color: #ffffff !important;
+    }
+}
+
 main {
     display: flex;
     flex-direction: row;

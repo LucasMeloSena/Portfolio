@@ -26,7 +26,7 @@
         background: none !important;
         top: 0;
         display: flex !important;
-        background-color: #00000094!important;
+        background-color: #00000094 !important;
         width: 100%;
         z-index: 1;
         overflow-x: hidden;
@@ -35,7 +35,7 @@
 
     .navbar-toggler
     {
-        background-color: #ffffff !important;
+        background-color: transparent !important;
         height: 30px !important;
         width: 30px !important;
         position: relative;
@@ -43,7 +43,7 @@
 
     .navbar-toggler-icon 
     {
-        background-color: #ffffff;
+        background-color: transparent;
         height: 15px !important;
         width: 15px !important;
         position: absolute;
@@ -346,6 +346,11 @@
         color: #12253B;
     }
 
+    #svg {
+        width: 100%;
+        padding-left: 50px;
+    }
+
     #blob-blue {
         width: 300px;
         height: 300px;
@@ -409,12 +414,11 @@
         justify-content: center;
     
         margin-top: 10%;
-        margin-bottom: 20%;
         text-align: center;
     }
     
     #secao2 {
-        margin-top: 25%;
+        margin-top: 20%;
         margin-bottom: 10%;
     
         display: flex;
@@ -922,8 +926,35 @@
     
     #secao7 {
         margin-top: 10%;
-        margin-bottom: 20%;
+        margin-bottom: 30%;
         width: 100%;
+    }
+
+    
+    #sub8 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 10%;
+        width: 100% !important;
+    }
+
+    #carouselExampleDark
+    {
+        width: 380px !important;
+        height: 35vh;
+    }
+    
+    .none 
+    {
+        display: block;
+    }
+
+    .block 
+    {
+        display: none;
     }
     
     #avaliacoes {
@@ -997,46 +1028,64 @@
         font-size: 12px;
         margin: 0;
     }
+
+    footer {
+        height: auto;
+        width: 100%;
+        margin: 0;
+    }
     
     #rodape {
         width: 100%;
-        max-height: 400px;
+        height: 65vh;
         border-radius: 2px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
         z-index: -1;
         position: absolute;
-        
+        background: linear-gradient(90deg, #555555 0%, rgba(56, 119, 186, 0.0260417) 112.7%, rgba(85, 85, 85, 0) 112.71%);
     }
     
     #rodape-alinhamento {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
     
-        margin-bottom: 4%;
+        margin: 0;
+    }
+
+    .correct {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     
     .rodape-titulo
     {
         font-family: 'Poppins', sans-serif;
         color: #ffffff;
-        font-size: 24px;
+        font-size: 14px;
     
         font-weight: 600;
-        margin-top: 30%;
     }
     
     .rodape-descricao {
         font-family: 'Poppins', sans-serif;
         color: #ffffff;
-        font-size: 16px;
+        font-size: 10px;
     }
     
     .links {
         font-family: 'Poppins', sans-serif;
         color: #ffffff;
-        font-size: 16px;
+        font-size: 10px;
         text-align: center;
     }
     
@@ -1048,9 +1097,10 @@
     #dados-autorais {
         font-family: 'Poppins', sans-serif;
         color: #ffffff;
-        font-size: 16px;
+        font-size: 10px;
     
         text-align: center;
+        margin-top: 20px;
     }
     
     #redes-sociais2 {
@@ -1062,4 +1112,8 @@
         
         width: 100%;
     }    
+
+    #lucasena {
+        margin-top: 10%;
+    }
 }

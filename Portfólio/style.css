@@ -117,7 +117,7 @@
 
     background: rgba(207, 206, 206, 0.144);
     border-radius: 5px;
-    width: auto;
+    width: 40%;
     height: 100%;
     margin-top: 10%;
 }
@@ -155,7 +155,7 @@
     height: 30px;
     width: 100%;
     font-family: 'Nunito Sans', sans-serif;
-    margin-top: 4%;
+    margin-top: 2%;
     transition: background .5s;
 }
 
@@ -336,7 +336,25 @@
 #descricao {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
+}
+
+.especializacao {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 1%;
+}
+
+.especialidades {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    margin: 0;
+}
+
+#space {
+    margin-bottom: 4%;
 }
 
 #btnCurriculo {
@@ -377,17 +395,8 @@
     align-items: center;
     justify-content: center;
 
-    margin-top: 10%;
+    margin-top: 200px;
     position: relative;
-}
-
-#picture 
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-left: 10%;
 }
 
 #blob-blue {
@@ -396,6 +405,16 @@
     position: absolute;
     z-index: -1;
     filter:drop-shadow(0 0 10px #678BB2);
+}
+
+#svg {
+    fill: #8EB9E5;
+    width: 480px;
+}
+
+.svg_mask {
+    width: 200px !important;
+    height: 200px !important;
 }
 
 #eu {
@@ -590,7 +609,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2%;
+    gap: 4%;
 
     margin-top: 2%;
 }
@@ -897,21 +916,55 @@
     margin: 0;
 }
 
+#sub8 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10%;
+    width: 30%;
+}
+
+#carouselExampleDark
+{
+    width: auto !important;
+    height: 46vh;
+}
+
+.none 
+{
+    display: none;
+}
+
+.block 
+{
+    display: block;
+}
+
 #rodape {
     width: 100%;
-    max-height: 400px;
+    height: 55vh;
     border-radius: 2px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 
     z-index: -1;
     position: absolute;
-    
+    background: linear-gradient(90deg, #555555cb 0%, rgba(56, 119, 186, 0.0260417) 112.7%, rgba(85, 85, 85, 0) 112.71%);
+    background-color: #678BB2;
 }
 
 #rodape-alinhamento {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    width: 100%;
+    gap: 5%;
 
     margin-bottom: 4%;
 }
@@ -960,4 +1013,30 @@
     gap: 10px;
     
     width: 100%;
+}
+
+#lucasena {
+    font-family: "Nunito Sans", sans-serif;
+    color: #ffffff;
+    margin: 0;
+    margin-top: 2%;
+}
+
+#s2 {
+    color: #6D9DD0;
+}
+
+@media (min-width: 900px) and (max-width: 1399px)
+{
+    #rodape {
+        height: 62vh;
+        background-color: #6D9DD0;
+    }
+
+    #camada {
+        z-index: 2;
+        position: fixed;
+        top: 0;
+        left: 70%;
+    }
 }
