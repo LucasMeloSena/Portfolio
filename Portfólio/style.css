@@ -146,6 +146,10 @@
     color: #fafafa;
 }
 
+#projetos-link {
+    width: 100%;
+}
+
 #projetos {
     background: linear-gradient(90.2deg, rgba(56, 119, 186, 0.35) 0.23%, #779DC6 99.89%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);

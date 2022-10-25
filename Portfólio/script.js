@@ -172,3 +172,20 @@ function color4()
     document.getElementById("about").style.color = "#12253B";
     document.getElementById("home").style.color = "#12253B";
 }
+
+function page() 
+{
+    let airplane = document.querySelector("#white");
+    airplane.addEventListener("click", function()
+    {
+        window.open("https://lucasena.netlify.app");
+    });
+    
+    let btnCode1 = document.querySelector("#btn1");
+    btnCode1.addEventListener("click", function()
+    {
+        window.open("https://github.com/LucasMeloSena/Portfolio");
+    });
+
+    
+}
