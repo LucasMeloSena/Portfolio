@@ -807,22 +807,11 @@
         flex-wrap: wrap;
         gap: 20px;
     
-        margin-bottom: 5%;
+        margin-bottom: 20%;
         margin-top: 6%;
         margin-left: 20px;
         margin-right: 20px;
     }
-    
-    /* .container-pai2 {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-        flex-wrap: wrap ;
-    
-        margin-right: 5%;
-        margin-bottom: 5%;
-    } */
     
     .container {
         display: flex;
@@ -856,6 +845,7 @@
         font-family: 'Nunito Sans', sans-serif;
         font-weight: 400;
         font-weight: 20px;
+        text-align: left;
     }
     
     .view {
