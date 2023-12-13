@@ -1,18 +1,18 @@
-import {
-    MainContainer
-} from '../../assets/styles/pages/BasePage/BasePage.style'
-import { Outlet } from 'react-router-dom'
+import { MainContainer } from "../../assets/styles/pages/BasePage/BasePage.style";
+import { Outlet } from "react-router-dom";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 function BasePage() {
-    return (
-        <>
-            <main>
-                <MainContainer>
-                    <Outlet/>
-                </MainContainer>
-            </main>
-        </>
-    )
+  return (
+    <>
+      <MainContainer>
+        <Header />
+        <Outlet />
+        <Footer />
+      </MainContainer>
+    </>
+  );
 }
 
-export default BasePage
+export default BasePage;
