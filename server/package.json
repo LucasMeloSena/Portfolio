@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc --watch",
+    "build": "npx tsc",
+    "build:watch": "npx tsc --watch",
     "start": "nodemon index.ts"
   },
   "author": "",
