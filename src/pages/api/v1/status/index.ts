@@ -1,7 +1,7 @@
 import database from "src/infra/database";
 import { QueryResult } from "pg";
 
-async function status(request: any, response: any) {
+async function status(response: any) {
   const updateAt: string = new Date().toISOString();
 
   const serverVersionResult: QueryResult | undefined = await database.query(
