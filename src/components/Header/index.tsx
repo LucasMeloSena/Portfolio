@@ -3,8 +3,10 @@ import {
   Logo,
   Pages,
   BtnDownloadResume,
-} from "src/styles/Header/Header.style";
+  DownloadIcon,
+} from "src/styles/components/Header/Header.style";
 import ImgLogo from "src/assets/img/logo.png";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const pages: string[] = ["HOME", "ABOUT", "PROJECTS", "CONTACT"];
@@ -16,7 +18,10 @@ function Header() {
         {pages.map((element, index) => (
           <Pages key={index}>{element}</Pages>
         ))}
-        <BtnDownloadResume>Download CV</BtnDownloadResume>
+        <BtnDownloadResume>
+          Download CV
+          <DownloadIcon icon={faArrowDown} />
+        </BtnDownloadResume>
       </MainContent>
     </>
   );
