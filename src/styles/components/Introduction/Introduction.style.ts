@@ -24,6 +24,7 @@ export const PresentationTextContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 15px;
 `;
 
 export const DefaultText = styled.h4<TextProps>`

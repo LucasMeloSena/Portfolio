@@ -1,21 +1,26 @@
-import {
-  DefaultText
-} from 'src/styles/components/Text/Text.style'
+import { DefaultText } from "src/styles/components/Text/Text.style";
 
 interface IText {
-  text: string,
-  fontSize: string,
-  fontWeight: string,
-  color: string,
-  marginBottom: string
+  text: string;
+  fontSize: string;
+  fontWeight: string;
+  color: string;
+  marginBottom: string;
 }
 
-function Title({text, fontSize, fontWeight, color, marginBottom}: IText) {
+function Title({ text, fontSize, fontWeight, color, marginBottom }: IText) {
   return (
     <>
-      <DefaultText fontWeight={fontWeight} fontSize={fontSize} color={color} marginBottom={marginBottom}>{text}</DefaultText>
+      <DefaultText
+        fontWeight={fontWeight}
+        fontSize={fontSize}
+        color={color}
+        marginBottom={marginBottom}
+      >
+        {text}
+      </DefaultText>
     </>
-  )
+  );
 }
 
-export default Title
+export default Title;

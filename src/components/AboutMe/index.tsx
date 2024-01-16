@@ -8,6 +8,22 @@ import {
 import { Title, Text, Skills } from "@/PortfolioUI";
 
 function AboutMe() {
+  interface IAboutMe {
+    name: string,
+    background: number
+  }
+
+  const skills: IAboutMe[] = [{
+    name: "HTML, CSS, React.js, Vue.js, Styled-Components",
+    background: 1
+  }, {
+    name: "JavaScript",
+    background: 2,
+  }, {
+    name: "Estilização de código",
+    background: 1,
+  }]
+
   return (
     <>
       <ContainerAboutMe>
@@ -30,8 +46,16 @@ function AboutMe() {
               and teamwork.
             </PresentationText>
             <ContainerSkills>
-              <Text text={'Skills'} color={"#FFF"} fontSize={"20px"} fontWeight={"600"} marginBottom={"20px"}/>
-              <Skills text={"HTML, CSS, React.js, Vue.js, Styled-Components"}/>
+              <Text
+                text={"Skills"}
+                color={"#FFF"}
+                fontSize={"20px"}
+                fontWeight={"600"}
+                marginBottom={"20px"}
+              />
+              {skills.map((item, index) => (
+                <Skills key={index} text={item.name} backGround={item.background}/>
+              ))}
             </ContainerSkills>
           </ContainerPresentationAndSkills>
         </MainContent>

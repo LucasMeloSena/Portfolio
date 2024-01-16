@@ -3,7 +3,7 @@ function Status() {
     <>
       <h1></h1>
     </>
-  )
+  );
 }
 
-export default Status
+export default Status;

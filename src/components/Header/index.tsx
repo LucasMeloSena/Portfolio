@@ -14,8 +14,8 @@ function Header() {
   const { reward, isAnimating } = useReward("rewardId", "confetti");
 
   const handleDownloadCvClick = () => {
-    reward()
-  }
+    reward();
+  };
 
   return (
     <>
@@ -25,7 +25,10 @@ function Header() {
           <Pages key={index}>{element}</Pages>
         ))}
         <div id="rewardId">
-          <BtnDownloadResume disabled={isAnimating} onClick={handleDownloadCvClick}>
+          <BtnDownloadResume
+            disabled={isAnimating}
+            onClick={handleDownloadCvClick}
+          >
             Download CV
             <DownloadIcon icon={faArrowDown} />
           </BtnDownloadResume>

@@ -1,6 +1,4 @@
-import {
-  MainContent
-} from "src/styles/pages/Home/Home.style";
+import { MainContent } from "src/styles/pages/Home/Home.style";
 import { Header, Footer, Introduction, AboutMe } from "@/PortfolioUI";
 
 function Home() {
@@ -9,7 +7,7 @@ function Home() {
       <Header />
 
       <MainContent>
-        <Introduction/>
+        <Introduction />
         <AboutMe />
       </MainContent>
 

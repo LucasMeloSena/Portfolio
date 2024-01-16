@@ -20,6 +20,9 @@ export const Pages = styled.h4`
   font-family: Poppins, sans-serif;
   color: #fff;
   font-weight: 500;
+  &:hover {
+    cursor: pointer
+  }
 `;
 
 export const BtnDownloadResume = styled.button`

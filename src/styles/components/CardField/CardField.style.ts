@@ -15,7 +15,6 @@ export const IconArrow = styled(FontAwesomeIcon)`
   color: #fff;
 `;
 
-
 export const MainContent = styled.div`
   width: 308px;
   height: 70px;
@@ -32,10 +31,10 @@ export const MainContent = styled.div`
     transition: all 0.5s;
     background-color: #fff;
     & ${MainText} {
-    color: #1b2029;
+      color: #1b2029;
     }
     & ${IconArrow} {
-    color: #1b2029;
+      color: #1b2029;
     }
   }
 `;
