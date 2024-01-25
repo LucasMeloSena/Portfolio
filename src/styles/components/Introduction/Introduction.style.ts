@@ -18,7 +18,7 @@ export const PresentationContainer = styled.div`
 `;
 
 export const PresentationTextContainer = styled.div`
-  margin-top: 180px;
+  margin-top: 120px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -75,7 +75,7 @@ export const ContainerImages = styled.div`
 
 export const BigL = styled.img`
   position: absolute;
-  top: 120px;
+  top: 80px;
   right: 320px;
   z-index: 0;
   width: 500px;
@@ -85,7 +85,7 @@ export const BigL = styled.img`
 export const LucasSena = styled.img`
   position: relative;
   z-index: 2;
-  top: 80px;
+  top: 40px;
   left: 240px;
   width: 400px;
   height: 400px;
@@ -95,7 +95,7 @@ export const Bow = styled.img`
   position: relative;
   z-index: 1;
   bottom: 50px;
-  top: 50px;
+  top: 15px;
   right: 40px;
   width: 450px;
   height: 500px;

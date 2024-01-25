@@ -21,7 +21,7 @@ export const Pages = styled.h4`
   color: #fff;
   font-weight: 500;
   &:hover {
-    cursor: pointer
+    cursor: pointer;
   }
 `;
 

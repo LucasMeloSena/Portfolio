@@ -1,5 +1,5 @@
 import { MainContent } from "src/styles/pages/Home/Home.style";
-import { Header, Footer, Introduction, AboutMe } from "@/PortfolioUI";
+import { Header, Footer, Introduction, AboutMe, Resume } from "@/PortfolioUI";
 
 function Home() {
   return (
@@ -9,6 +9,7 @@ function Home() {
       <MainContent>
         <Introduction />
         <AboutMe />
+        <Resume />
       </MainContent>
 
       <Footer />

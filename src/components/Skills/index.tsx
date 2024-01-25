@@ -8,16 +8,16 @@ interface ISkills {
 }
 
 function Skills({ text, backGround }: ISkills) {
-  const [background, setBackground] = useState<string>('');
-  
+  const [background, setBackground] = useState<string>("");
+
   useEffect(() => {
     if (backGround == 1) {
-      setBackground('rgba(93, 97, 103, 0.36)')
+      setBackground("rgba(93, 97, 103, 0.36)");
     }
     if (backGround == 2) {
-      setBackground('#1b2029')
+      setBackground("#1b2029");
     }
-  }, [])
+  }, []);
 
   return (
     <>
