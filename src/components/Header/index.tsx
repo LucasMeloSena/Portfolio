@@ -4,7 +4,7 @@ import {
   Pages,
   BtnDownloadResume,
   DownloadIcon,
-} from "../../styles/components/Header/Header.style";
+} from "src/styles/components/Header/Header.style";
 import ImgLogo from "src/assets/img/logo.png";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useReward } from "react-rewards";
