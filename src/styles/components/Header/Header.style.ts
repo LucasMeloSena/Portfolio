@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
 export const MainContent = styled.div`
@@ -46,8 +45,4 @@ export const BtnDownloadResume = styled.button`
     color: #1b2029;
     cursor: pointer;
   }
-`;
-
-export const DownloadIcon = styled(FontAwesomeIcon)`
-  font-size: 16px;
 `;

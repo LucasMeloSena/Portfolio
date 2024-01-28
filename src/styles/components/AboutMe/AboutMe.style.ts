@@ -7,6 +7,7 @@ export const ContainerAboutMe = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding: 0px 100px 0px 100px;
 `;
 
 export const MainContent = styled.div`

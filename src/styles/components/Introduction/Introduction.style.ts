@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconFontAwesome } from "src/styles/components/Icon/Icon.style";
 
 interface TextProps {
   color: string;
@@ -15,6 +15,7 @@ export const PresentationContainer = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  padding: 0px 100px 0px 100px;
 `;
 
 export const PresentationTextContainer = styled.div`
@@ -42,11 +43,6 @@ export const ContainerSocialMedia = styled.div`
   gap: 10px;
 `;
 
-export const SocialMediaIcon = styled(FontAwesomeIcon)`
-  color: #1b2029;
-  font-size: 16px;
-`;
-
 export const ContainerIcon = styled.div`
   width: 40px;
   height: 40px;
@@ -61,8 +57,7 @@ export const ContainerIcon = styled.div`
     background-color: #1b2029;
     color: #fff;
     cursor: pointer;
-
-    & ${SocialMediaIcon} {
+    & ${IconFontAwesome} {
       color: #fff;
     }
   }

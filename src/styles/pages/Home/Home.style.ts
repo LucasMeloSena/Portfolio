@@ -8,5 +8,4 @@ export const MainContent = styled.div`
   justify-content: center;
   align-items: center;
   gap: 40px;
-  padding: 0px 100px 0px 100px;
 `;

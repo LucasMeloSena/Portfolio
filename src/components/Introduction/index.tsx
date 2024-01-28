@@ -4,7 +4,6 @@ import {
   DefaultText,
   ContainerSocialMedia,
   ContainerIcon,
-  SocialMediaIcon,
   ContainerImages,
   BigL,
   Bow,
@@ -15,7 +14,6 @@ import ImgLucasena from "src/assets/img/Home/lucasena.png";
 import ImgBigL from "src/assets/img/Home/bigL.png";
 import ImgBow from "src/assets/img/Home/bow.png";
 import {
-  faArrowRight,
   faCode,
   faDisplay,
   faEnvelope,
@@ -26,7 +24,7 @@ import {
   faGithub,
   IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
-import { CardField } from "@/PortfolioUI";
+import { CardField, Icon } from "@/PortfolioUI";
 
 function Introduction() {
   interface KnowLedge {
@@ -86,7 +84,7 @@ function Introduction() {
           <ContainerSocialMedia>
             {socialMediaIcons.map((item, index) => (
               <ContainerIcon key={index}>
-                <SocialMediaIcon icon={item} />
+                <Icon icon={item} color={"#1b2029"} />
               </ContainerIcon>
             ))}
           </ContainerSocialMedia>
@@ -104,7 +102,6 @@ function Introduction() {
             key={index}
             mainText={item.nome}
             iconKnowledge={item.icon}
-            iconArrow={faArrowRight}
           />
         ))}
       </KnowledgeContainer>

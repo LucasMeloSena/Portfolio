@@ -1,24 +1,21 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import {
   MainContent,
-  IconKnowledge,
   MainText,
-  IconArrow,
 } from "src/styles/components/CardField/CardField.style";
+import { Icon } from "@/PortfolioUI";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 interface ICardField {
   iconKnowledge: IconDefinition;
   mainText: string;
-  iconArrow: IconDefinition;
 }
 
-function CardField({ iconKnowledge, mainText, iconArrow }: ICardField) {
+function CardField({ iconKnowledge, mainText }: ICardField) {
   return (
     <>
       <MainContent>
-        <IconKnowledge icon={iconKnowledge} />
+        <Icon icon={iconKnowledge} color={"#6d9dd0"} />
         <MainText>{mainText}</MainText>
-        <IconArrow icon={iconArrow} />
       </MainContent>
     </>
   );
