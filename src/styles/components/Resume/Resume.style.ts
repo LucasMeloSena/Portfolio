@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerResume = styled.div`
   width: 100%;
-  height: 600px;
+  height: auto;
   background: rgba(93, 97, 103, 0.36);
   margin-top: 80px;
   border-radius: 5px;
@@ -11,6 +11,7 @@ export const ContainerResume = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding-top: 40px;
+  padding-bottom: 40px;
   margin-bottom: 500px;
 `;
 
@@ -35,7 +36,7 @@ export const ContainerAreas = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 200px;
   width: 100%;
 `;

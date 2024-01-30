@@ -5,7 +5,7 @@ export const MainContent = styled.div`
   height: 100px;
   background-color: #1b2029;
   display: grid;
-  grid-template-columns: 42% 10% 10% 10% 10% 18%;
+  grid-template-columns: 32% 10% 10% 10% 10% 10% 18%;
   justify-content: flex-start;
   align-items: center;
   padding: 0px 0px 0px 40px;

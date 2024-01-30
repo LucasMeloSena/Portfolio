@@ -11,7 +11,7 @@ import Swal from "sweetalert2";
 import { Icon } from "@/PortfolioUI";
 
 function Header() {
-  const pages: string[] = ["HOME", "ABOUT", "PROJECTS", "CONTACT"];
+  const pages: string[] = ["HOME", "ABOUT", "PROJECTS", "CONTACT", "STATUS"];
   const { reward, isAnimating } = useReward("rewardId", "confetti");
 
   const handleDownloadCvClick = () => {

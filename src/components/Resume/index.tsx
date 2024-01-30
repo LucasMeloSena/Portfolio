@@ -10,17 +10,54 @@ import {
   faBriefcase,
   faGraduationCap,
 } from "@fortawesome/free-solid-svg-icons";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+interface ICardResume {
+  codigo: number;
+  periodo: string;
+  titulo: string;
+  empresa: string;
+  endereco: string;
+}
 
 function Resume() {
-  // const [education, setEducation] = useState<object[]>([])
-  // const [experience, setExperience] = useState<object[]>([])
+  const [education, setEducation] = useState<ICardResume[]>([]);
+  const [experience, setExperience] = useState<ICardResume[]>([]);
 
   useEffect(() => {
-    const result = fetch("http://localhost:3000/api/v1/education", {
-      method: "GET",
-    });
-    console.log(result);
+    async function getEducation() {
+      await fetch("http://localhost:3000/api/v1/education", {
+        method: "GET",
+      })
+        .then(async (response) => {
+          const result = await response.json();
+          setEducation(result.data);
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+    }
+
+    async function getExperience() {
+      await fetch("http://localhost:3000/api/v1/experience", {
+        method: "GET",
+      })
+        .then(async (response) => {
+          const result = await response.json();
+          const value = result.data.sort(function (
+            a: ICardResume,
+            b: ICardResume,
+          ) {
+            return b.codigo - a.codigo;
+          });
+          setExperience(value);
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+    }
+    getEducation();
+    getExperience();
   }, []);
 
   return (
@@ -43,12 +80,15 @@ function Resume() {
                 marginBottom={"0px"}
               />
             </ContainerArea>
-            <CardResume
-              period={"February 2021 - December 2023"}
-              jobTitle={"I.T Technician"}
-              company={"COTEMIG"}
-              adress={"Belo Horizonte - Minas Gerais - Brazil"}
-            />
+            {education.map((item, index) => (
+              <CardResume
+                key={index}
+                period={item.periodo}
+                jobTitle={item.titulo}
+                company={item.empresa}
+                adress={item.endereco}
+              />
+            ))}
           </ContainerEducation>
           <ContainerExperience>
             <ContainerArea>
@@ -61,12 +101,15 @@ function Resume() {
                 marginBottom={"0px"}
               />
             </ContainerArea>
-            <CardResume
-              period={"September 2023 - the moment"}
-              jobTitle={"Systems Development Intern"}
-              company={"Dottatec Soluções Inteligentes"}
-              adress={"Belo Horizonte - Minas Gerais - Brazil"}
-            />
+            {experience.map((item, index) => (
+              <CardResume
+                key={index}
+                period={item.periodo}
+                jobTitle={item.titulo}
+                company={item.empresa}
+                adress={item.endereco}
+              />
+            ))}
           </ContainerExperience>
         </ContainerAreas>
       </ContainerResume>

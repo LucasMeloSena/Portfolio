@@ -16,7 +16,6 @@ import ImgBow from "src/assets/img/Home/bow.png";
 import {
   faCode,
   faDisplay,
-  faEnvelope,
   faMobileButton,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -33,7 +32,6 @@ function Introduction() {
   }
 
   const socialMediaIcons: IconDefinition[] = [
-    faEnvelope,
     faLinkedinIn,
     faGithub,
   ];
@@ -52,6 +50,22 @@ function Introduction() {
       icon: faMobileButton,
     },
   ];
+
+  const handleClickSocialIcon = (index: number) => {
+    const redirect = {
+      0() {
+        window.open('https://www.linkedin.com/in/lucas-sena-282311234')
+      },
+      1() {
+        window.open('https://github.com/LucasMeloSena')
+      }
+    }
+
+    const result = redirect[index]
+    if (result) {
+      result()
+    }
+  }
 
   return (
     <>
@@ -83,8 +97,8 @@ function Introduction() {
           </DefaultText>
           <ContainerSocialMedia>
             {socialMediaIcons.map((item, index) => (
-              <ContainerIcon key={index}>
-                <Icon icon={item} color={"#1b2029"} />
+              <ContainerIcon key={index} onClick={() => handleClickSocialIcon(index)}>
+                <Icon icon={item} color={"#1b2029"}/>
               </ContainerIcon>
             ))}
           </ContainerSocialMedia>

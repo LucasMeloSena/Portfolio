@@ -1,7 +1,17 @@
 import database from "src/infra/database";
 import { QueryResult } from "pg";
+import type { NextApiRequest, NextApiResponse } from "next";
 
-async function status(response: any) {
+interface IStatus {
+  update_at: Date;
+  dependencies: object;
+  database: object;
+  version: string;
+  max_connections: number;
+  opened_connections: number;
+}
+
+async function status(request: NextApiRequest, response: NextApiResponse) {
   try {
     const updateAt: string = new Date().toISOString();
 
@@ -38,4 +48,14 @@ async function status(response: any) {
   }
 }
 
-export default status;
+type ResponseData = {
+  message: string;
+  data: IStatus[];
+};
+
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<ResponseData>,
+) {
+  status(req, res);
+}
