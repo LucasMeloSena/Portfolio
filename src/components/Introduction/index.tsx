@@ -28,44 +28,52 @@ import { CardField, Icon } from "@/PortfolioUI";
 function Introduction() {
   interface KnowLedge {
     nome: string;
-    icon: IconDefinition;
+    iconKnowLedge: IconDefinition;
   }
 
-  const socialMediaIcons: IconDefinition[] = [
-    faLinkedinIn,
-    faGithub,
-  ];
+  interface SocialMediaIcons {
+    iconSocialMedia: IconDefinition,
+    name: string
+  }
+
+  const socialMediaIcons: SocialMediaIcons[] = [{
+    iconSocialMedia: faLinkedinIn,
+    name: 'LinkedIn'
+  }, {
+    iconSocialMedia: faGithub,
+    name: 'GitHub'
+  }];
 
   const knowledge: KnowLedge[] = [
     {
       nome: "Front End Developer",
-      icon: faDisplay,
+      iconKnowLedge: faDisplay,
     },
     {
       nome: "Back End Developer",
-      icon: faCode,
+      iconKnowLedge: faCode,
     },
     {
       nome: "Mobile Developer",
-      icon: faMobileButton,
+      iconKnowLedge: faMobileButton,
     },
   ];
 
-  const handleClickSocialIcon = (index: number) => {
-    const redirect = {
-      0() {
-        window.open('https://www.linkedin.com/in/lucas-sena-282311234')
+  const handleClickSocialIcon = (name: string) => {
+    const redirect: { [name: string]: () => void } = {
+      LinkedIn() {
+        window.open("https://www.linkedin.com/in/lucas-sena-282311234");
       },
-      1() {
-        window.open('https://github.com/LucasMeloSena')
-      }
-    }
+      GitHub() {
+        window.open("https://github.com/LucasMeloSena");
+      },
+    };
 
-    const result = redirect[index]
+    const result = redirect[name];
     if (result) {
-      result()
+      result();
     }
-  }
+  };
 
   return (
     <>
@@ -97,8 +105,11 @@ function Introduction() {
           </DefaultText>
           <ContainerSocialMedia>
             {socialMediaIcons.map((item, index) => (
-              <ContainerIcon key={index} onClick={() => handleClickSocialIcon(index)}>
-                <Icon icon={item} color={"#1b2029"}/>
+              <ContainerIcon
+                key={index}
+                onClick={() => handleClickSocialIcon(item.name)}
+              >
+                <Icon icon={item.iconSocialMedia} color={"#1b2029"} />
               </ContainerIcon>
             ))}
           </ContainerSocialMedia>
@@ -115,7 +126,7 @@ function Introduction() {
           <CardField
             key={index}
             mainText={item.nome}
-            iconKnowledge={item.icon}
+            iconKnowledge={item.iconKnowLedge}
           />
         ))}
       </KnowledgeContainer>
