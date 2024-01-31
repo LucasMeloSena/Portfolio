@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { IconFontAwesome } from "src/styles/components/Icon/Icon.style";
 
 export const MainContent = styled.div`
   width: 100%;
@@ -44,5 +45,8 @@ export const BtnDownloadResume = styled.button`
     background-color: #fff;
     color: #1b2029;
     cursor: pointer;
+    & ${IconFontAwesome} {
+      color: #1b2029;
+    }
   }
 `;

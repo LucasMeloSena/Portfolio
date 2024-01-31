@@ -4,11 +4,14 @@ export const ContainerAboutMe = styled.div`
   margin-top: 80px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+  gap: 250px;
   padding: 0px 100px 0px 100px;
 `;
+
+export const DefaultContainer = styled.div``;
 
 export const MainContent = styled.div`
   display: flex;
@@ -40,3 +43,5 @@ export const ContainerSkills = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 `;
+
+export const ContainerFrameStacks = styled.div``;

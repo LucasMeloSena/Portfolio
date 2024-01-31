@@ -26,7 +26,7 @@ function Skills({ text, backGround }: ISkills) {
           text={text}
           color={"#FFF"}
           fontSize={"14px"}
-          fontWeight={"400"}
+          fontWeight={"300"}
           marginBottom={"0px"}
         />
       </MainContent>

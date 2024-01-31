@@ -25,24 +25,27 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { CardField, Icon } from "@/PortfolioUI";
 
+interface KnowLedge {
+  nome: string;
+  iconKnowLedge: IconDefinition;
+}
+
+interface SocialMediaIcons {
+  iconSocialMedia: IconDefinition;
+  name: string;
+}
+
 function Introduction() {
-  interface KnowLedge {
-    nome: string;
-    iconKnowLedge: IconDefinition;
-  }
-
-  interface SocialMediaIcons {
-    iconSocialMedia: IconDefinition,
-    name: string
-  }
-
-  const socialMediaIcons: SocialMediaIcons[] = [{
-    iconSocialMedia: faLinkedinIn,
-    name: 'LinkedIn'
-  }, {
-    iconSocialMedia: faGithub,
-    name: 'GitHub'
-  }];
+  const socialMediaIcons: SocialMediaIcons[] = [
+    {
+      iconSocialMedia: faLinkedinIn,
+      name: "LinkedIn",
+    },
+    {
+      iconSocialMedia: faGithub,
+      name: "GitHub",
+    },
+  ];
 
   const knowledge: KnowLedge[] = [
     {

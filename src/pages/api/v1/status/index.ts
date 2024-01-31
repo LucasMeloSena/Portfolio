@@ -13,6 +13,9 @@ interface IStatus {
 
 async function status(request: NextApiRequest, response: NextApiResponse) {
   try {
+    //@ts-ignore
+    request;
+
     const updateAt: string = new Date().toISOString();
 
     const serverVersionResult: QueryResult | undefined = await database.query(

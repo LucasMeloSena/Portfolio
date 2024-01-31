@@ -9,3 +9,4 @@ export { default as Skills } from "@/Skills";
 export { default as Resume } from "@/Resume";
 export { default as Icon } from "@/Icon";
 export { default as CardResume } from "@/CardResume";
+export { default as Stack } from "@/Stack";

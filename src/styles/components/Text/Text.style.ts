@@ -13,6 +13,6 @@ export const DefaultText = styled.h4<IText>`
   font-size: ${(props) => props.fontSize || "16px"};
   font-style: normal;
   font-weight: ${(props) => props.fontWeight || "500"};
-  line-height: 1em;
+  line-height: 1.2em;
   margin-bottom: ${(props) => props.marginBottom || "0px"} !important;
 `;

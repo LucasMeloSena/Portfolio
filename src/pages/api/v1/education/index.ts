@@ -13,6 +13,9 @@ async function education(
   response: NextApiResponse,
 ): Promise<void> {
   try {
+    //@ts-ignore
+    request;
+
     const educationResult = await database.query("SELECT * FROM EDUCATION");
     const educationValue = educationResult.rows;
 

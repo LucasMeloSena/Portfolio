@@ -13,6 +13,9 @@ async function experience(
   response: NextApiResponse,
 ): Promise<void> {
   try {
+    //@ts-ignore
+    request;
+
     const experienceResult = await database.query("SELECT * FROM EXPERIENCE");
     const experienceValue = experienceResult.rows;
 
