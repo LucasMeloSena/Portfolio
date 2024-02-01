@@ -11,7 +11,7 @@ import {
   faGraduationCap,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
-require('dotenv').config()
+require("dotenv").config();
 
 interface ICardResume {
   codigo: number;
@@ -27,7 +27,7 @@ function Resume() {
 
   useEffect(() => {
     async function getEducation() {
-      const endpoint = process.env.ENDPOINT || ''
+      const endpoint = process.env.ENDPOINT || "";
       await fetch(`${endpoint}/api/v1/education`, {
         method: "GET",
       })
@@ -41,7 +41,7 @@ function Resume() {
     }
 
     async function getExperience() {
-      const endpoint = process.env.ENDPOINT || ''
+      const endpoint = process.env.ENDPOINT || "";
       await fetch(`${endpoint}/api/v1/experience`, {
         method: "GET",
       })

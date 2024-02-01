@@ -11,10 +11,11 @@ async function files(
   response: NextApiResponse,
 ): Promise<void> {
   try {
-    //@ts-ignore
-    request;
-
-    const filesResult = await database.query("SELECT * FROM FILES");
+    const codigo = request.body.codigo;
+    const filesResult = await database.query({
+      text: "SELECT * FROM FILES WHERE CODIGO = $1",
+      values: [codigo],
+    });
     const filesValue = filesResult.rows;
 
     response.status(200).json({
