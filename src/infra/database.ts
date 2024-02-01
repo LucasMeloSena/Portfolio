@@ -2,11 +2,7 @@ import { Client } from "pg";
 
 async function query(queryObject: any) {
   const client = new Client({
-    host: process.env.POSTGRES_HOST,
-    port: parseInt(process.env.POSTGRES_PORT as string, 10),
-    user: process.env.POSTGRES_USER,
-    database: process.env.POSTGRES_DATABASE,
-    password: process.env.POSTGRES_PASSWORD,
+    connectionString: `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@${process.env.POSTGRES_HOST}:${process.env.POSTGRES_PORT}/${process.env.POSTGRES_DATABASE}?sslmode=require`
   });
   try {
     await client.connect();
