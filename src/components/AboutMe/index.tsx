@@ -18,6 +18,7 @@ import {
   ImgDevops,
   ImgCloud,
 } from "src/assets/img/index";
+require('dotenv').config()
 
 interface IStack {
   nome: string;
@@ -42,11 +43,10 @@ function AboutMe() {
     cloud: [],
   });
 
-  require('dotenv').config();
   useEffect(() => {
-    async function getSkills() {
-      console.log(process.env.ENDPOINT)
-      await fetch(`${process.env.ENDPOINT}/api/v1/skills`, {
+    async function getSkills() {;
+      const endpoint = process.env.ENDPOINT || ''
+      await fetch(`${endpoint}/api/v1/skills`, {
         method: "GET",
       })
         .then(async (response) => {
