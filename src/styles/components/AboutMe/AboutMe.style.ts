@@ -7,7 +7,7 @@ export const ContainerAboutMe = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 250px;
+  gap: 150px;
   padding: 0px 100px 0px 100px;
 `;
 
@@ -38,10 +38,29 @@ export const PresentationText = styled.h4`
 `;
 
 export const ContainerSkills = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 `;
 
-export const ContainerFrameStacks = styled.div``;
+export const ContainerSkill = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+`;
+
+export const ContainerFrameStacks = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`;

@@ -1,27 +1,14 @@
 import { MainContent } from "src/styles/components/Skills/Skills.style";
 import { Text } from "@/PortfolioUI";
-import { useEffect, useState } from "react";
 
 interface ISkills {
   text: string;
-  backGround: number;
 }
 
-function Skills({ text, backGround }: ISkills) {
-  const [background, setBackground] = useState<string>("");
-
-  useEffect(() => {
-    if (backGround == 1) {
-      setBackground("rgba(93, 97, 103, 0.36)");
-    }
-    if (backGround == 2) {
-      setBackground("#1b2029");
-    }
-  }, []);
-
+function Skills({ text }: ISkills) {
   return (
     <>
-      <MainContent background={background}>
+      <MainContent>
         <Text
           text={text}
           color={"#FFF"}

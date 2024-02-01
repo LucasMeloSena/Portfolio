@@ -1,17 +1,21 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { ConteudoPrincipal } from "src/styles/components/Stack/Stack.style";
-import { Icon, Text } from "@/PortfolioUI";
+import {
+  ConteudoPrincipal,
+  ImageStack,
+} from "src/styles/components/Stack/Stack.style";
+import { Text } from "@/PortfolioUI";
+import { StaticImageData } from "next/image";
 
 interface IStack {
-  icon: IconDefinition;
+  image: StaticImageData;
   nome: string;
+  marginTop: string;
 }
 
-function Stack({ icon, nome }: IStack) {
+function Stack({ image, nome, marginTop }: IStack) {
   return (
     <>
-      <ConteudoPrincipal>
-        <Icon icon={icon} />
+      <ConteudoPrincipal marginTop={marginTop}>
+        <ImageStack src={image.src} alt="image-stack" />
         <Text
           text={nome}
           color={"#FFF"}

@@ -5,10 +5,19 @@ import {
   PresentationText,
   ContainerPresentationAndSkills,
   ContainerSkills,
+  ContainerSkill,
   ContainerFrameStacks,
 } from "src/styles/components/AboutMe/AboutMe.style";
-import { Title, Text, Skills } from "@/PortfolioUI";
+import { Title, Text, Skills, Stack } from "@/PortfolioUI";
 import { useEffect, useState } from "react";
+import {
+  ImgBackend,
+  ImgFrontend,
+  ImgMobile,
+  ImgDatabase,
+  ImgDevops,
+  ImgCloud,
+} from "src/assets/img/index";
 
 interface IStack {
   nome: string;
@@ -35,7 +44,7 @@ function AboutMe() {
 
   useEffect(() => {
     async function getSkills() {
-      await fetch("http://localhost:3000/api/v1/skills", {
+      await fetch(`${process.env.ENDPOINT}api/v1/skills`, {
         method: "GET",
       })
         .then(async (response) => {
@@ -56,12 +65,45 @@ function AboutMe() {
   const devops = skills.devops.map((item) => item.nome).join(", ");
   const cloud = skills.cloud.map((item) => item.nome).join(", ");
   const containerSkill = [
-    { background: 1, stack: frontend },
-    { background: 2, stack: backend },
-    { background: 1, stack: mobile },
-    { background: 2, stack: databases },
-    { background: 1, stack: devops },
-    { background: 2, stack: cloud },
+    { stack: frontend },
+    { stack: backend },
+    { stack: mobile },
+    { stack: databases },
+    { stack: devops },
+    { stack: cloud },
+  ];
+
+  const stacks = [
+    {
+      nome: "Front End",
+      image: ImgFrontend,
+      marginTop: "0px",
+    },
+    {
+      nome: "Back End",
+      image: ImgBackend,
+      marginTop: "30px",
+    },
+    {
+      nome: "Mobile",
+      image: ImgMobile,
+      marginTop: "0px",
+    },
+    {
+      nome: "Data Base",
+      image: ImgDatabase,
+      marginTop: "30px",
+    },
+    {
+      nome: "DevOps",
+      image: ImgDevops,
+      marginTop: "0px",
+    },
+    {
+      nome: "Cloud",
+      image: ImgCloud,
+      marginTop: "30px",
+    },
   ];
 
   return (
@@ -92,25 +134,27 @@ function AboutMe() {
                   color={"#FFF"}
                   fontSize={"20px"}
                   fontWeight={"600"}
-                  marginBottom={"20px"}
+                  marginBottom={"10px"}
                 />
-                {containerSkill.map((item, index) => (
-                  <Skills
-                    key={index}
-                    backGround={item.background}
-                    text={item.stack}
-                  />
-                ))}
+                <ContainerSkill>
+                  {containerSkill.map((item, index) => (
+                    <Skills key={index} text={item.stack} />
+                  ))}
+                </ContainerSkill>
               </ContainerSkills>
             </ContainerPresentationAndSkills>
           </MainContent>
         </DefaultContainer>
 
         <ContainerFrameStacks>
-          {/* <Stack 
-          icon={}
-          nome={}
-          /> */}
+          {stacks.map((item, index) => (
+            <Stack
+              key={index}
+              image={item.image}
+              nome={item.nome}
+              marginTop={item.marginTop}
+            />
+          ))}
         </ContainerFrameStacks>
       </ContainerAboutMe>
     </>

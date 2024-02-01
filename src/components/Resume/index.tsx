@@ -26,7 +26,7 @@ function Resume() {
 
   useEffect(() => {
     async function getEducation() {
-      await fetch("http://localhost:3000/api/v1/education", {
+      await fetch(`${process.env.ENDPOINT}api/v1/education`, {
         method: "GET",
       })
         .then(async (response) => {
@@ -39,7 +39,7 @@ function Resume() {
     }
 
     async function getExperience() {
-      await fetch("http://localhost:3000/api/v1/experience", {
+      await fetch(`${process.env.ENDPOINT}api/v1/experience`, {
         method: "GET",
       })
         .then(async (response) => {

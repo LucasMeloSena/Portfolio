@@ -10,9 +10,6 @@ import {
   LucasSena,
   KnowledgeContainer,
 } from "src/styles/components/Introduction/Introduction.style";
-import ImgLucasena from "src/assets/img/Home/lucasena.png";
-import ImgBigL from "src/assets/img/Home/bigL.png";
-import ImgBow from "src/assets/img/Home/bow.png";
 import {
   faCode,
   faDisplay,
@@ -24,6 +21,7 @@ import {
   IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
 import { CardField, Icon } from "@/PortfolioUI";
+import { ImgBow, ImgBigL, ImgLucasSena } from "src/assets/img/index";
 
 interface KnowLedge {
   nome: string;
@@ -119,7 +117,7 @@ function Introduction() {
         </PresentationTextContainer>
         <ContainerImages>
           <BigL src={ImgBigL.src} alt="big-l" />
-          <LucasSena src={ImgLucasena.src} alt="lucasena" />
+          <LucasSena src={ImgLucasSena.src} alt="lucasena" />
           <Bow src={ImgBow.src} alt="bow" />
         </ContainerImages>
       </PresentationContainer>
