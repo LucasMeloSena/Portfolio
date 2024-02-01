@@ -46,7 +46,7 @@ function AboutMe() {
   useEffect(() => {
     async function getSkills() {
       console.log(process.env.ENDPOINT)
-      await fetch(`${process.env.ENDPOINT}api/v1/skills`, {
+      await fetch(`${process.env.ENDPOINT}/api/v1/skills`, {
         method: "GET",
       })
         .then(async (response) => {
