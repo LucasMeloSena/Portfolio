@@ -42,8 +42,10 @@ function AboutMe() {
     cloud: [],
   });
 
+  require('dotenv').config();
   useEffect(() => {
     async function getSkills() {
+      console.log(process.env.ENDPOINT)
       await fetch(`${process.env.ENDPOINT}api/v1/skills`, {
         method: "GET",
       })
