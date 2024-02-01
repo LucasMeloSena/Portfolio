@@ -5,7 +5,7 @@ async function query(queryObject: any) {
     host: process.env.POSTGRES_HOST,
     port: parseInt(process.env.POSTGRES_PORT as string, 10),
     user: process.env.POSTGRES_USER,
-    database: process.env.POSTGRES_DB,
+    database: process.env.POSTGRES_DATABASE,
     password: process.env.POSTGRES_PASSWORD,
   });
   try {
