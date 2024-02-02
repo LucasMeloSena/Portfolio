@@ -29,9 +29,9 @@ function Header() {
         const result = await response.json();
         const file_path: string = result.data[0].file_path;
         const file_name: string = result.data[0].file_name;
-        const url = window.URL.createObjectURL(
-          new Blob([file_path], { type: "application/pdf" }),
-        );
+        const file_request = await fetch(file_path)
+        const fileData = await file_request.blob();
+        const url = window.URL.createObjectURL(fileData);
 
         const link = document.createElement("a");
         link.href = url;
@@ -39,6 +39,7 @@ function Header() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        
         reward();
       })
       .catch((error) => {
