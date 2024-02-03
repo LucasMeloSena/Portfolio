@@ -10,3 +10,4 @@ export { default as Resume } from "@/Resume";
 export { default as Icon } from "@/Icon";
 export { default as CardResume } from "@/CardResume";
 export { default as Stack } from "@/Stack";
+export { default as Projects } from "@/Projects";

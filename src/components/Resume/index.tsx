@@ -10,7 +10,7 @@ import {
   faBriefcase,
   faGraduationCap,
 } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
+import { HTMLAttributes, forwardRef, useEffect, useState } from "react";
 require("dotenv").config();
 
 interface ICardResume {
@@ -21,7 +21,9 @@ interface ICardResume {
   endereco: string;
 }
 
-function Resume() {
+interface IResume extends HTMLAttributes<HTMLDivElement> {}
+
+const Resume = forwardRef<HTMLDivElement, IResume>((props, ref) => {
   const [education, setEducation] = useState<ICardResume[]>([]);
   const [experience, setExperience] = useState<ICardResume[]>([]);
 
@@ -65,7 +67,7 @@ function Resume() {
 
   return (
     <>
-      <ContainerResume>
+      <ContainerResume {...props} ref={ref}>
         <Title text={"Resume"} />
         <ContainerAreas>
           <ContainerEducation>
@@ -118,6 +120,6 @@ function Resume() {
       </ContainerResume>
     </>
   );
-}
+})
 
 export default Resume;

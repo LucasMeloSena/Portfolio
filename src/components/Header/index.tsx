@@ -10,8 +10,12 @@ import { useReward } from "react-rewards";
 import { Icon } from "@/PortfolioUI";
 require("dotenv").config();
 
-function Header() {
-  const pages: string[] = ["HOME", "ABOUT", "PROJECTS", "CONTACT", "STATUS"];
+interface IHeader {
+  handleClickScroll: (teste: string) => void
+}
+
+function Header({handleClickScroll}: IHeader) {
+  const pages: string[] = ["ABOUT ME", "RESUME", "PROJECTS", "CONTACT", "STATUS"];
   const { reward, isAnimating } = useReward("rewardId", "confetti");
 
   const handleDownloadCvClick = async () => {
@@ -51,8 +55,8 @@ function Header() {
     <>
       <MainContent>
         <Logo src={ImgLogo.src} alt="img-logo" />
-        {pages.map((element, index) => (
-          <Pages key={index}>{element}</Pages>
+        {pages.map((item, index) => (
+          <Pages key={index} onClick={() => handleClickScroll(item)}>{item}</Pages>
         ))}
         <div id="rewardId">
           <BtnDownloadResume

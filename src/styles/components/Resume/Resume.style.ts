@@ -12,7 +12,6 @@ export const ContainerResume = styled.div`
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  margin-bottom: 500px;
 `;
 
 export const ContainerEducation = styled.div`

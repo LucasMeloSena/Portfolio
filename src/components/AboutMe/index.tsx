@@ -9,7 +9,7 @@ import {
   ContainerFrameStacks,
 } from "src/styles/components/AboutMe/AboutMe.style";
 import { Title, Text, Skills, Stack } from "@/PortfolioUI";
-import { useEffect, useState } from "react";
+import { useEffect, useState, forwardRef, HTMLAttributes } from "react";
 import {
   ImgBackend,
   ImgFrontend,
@@ -33,7 +33,9 @@ interface ISkills {
   cloud: IStack[];
 }
 
-function AboutMe() {
+interface IAboutMe extends HTMLAttributes<HTMLDivElement> {}
+
+const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props, ref) => {
   const [skills, setSkills] = useState<ISkills>({
     frontend: [],
     backend: [],
@@ -110,7 +112,7 @@ function AboutMe() {
 
   return (
     <>
-      <ContainerAboutMe>
+      <ContainerAboutMe {...props} ref={ref}>
         <DefaultContainer>
           <Title text="About Me" />
           <Text
@@ -161,6 +163,6 @@ function AboutMe() {
       </ContainerAboutMe>
     </>
   );
-}
+});
 
 export default AboutMe;
