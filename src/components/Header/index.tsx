@@ -11,11 +11,17 @@ import { Icon } from "@/PortfolioUI";
 require("dotenv").config();
 
 interface IHeader {
-  handleClickScroll: (teste: string) => void
+  handleClickScroll: (teste: string) => void;
 }
 
-function Header({handleClickScroll}: IHeader) {
-  const pages: string[] = ["ABOUT ME", "RESUME", "PROJECTS", "CONTACT", "STATUS"];
+function Header({ handleClickScroll }: IHeader) {
+  const pages: string[] = [
+    "ABOUT ME",
+    "RESUME",
+    "PROJECTS",
+    "AWARDS AND CERTIFICATES",
+    "CONTACT",
+  ];
   const { reward, isAnimating } = useReward("rewardId", "confetti");
 
   const handleDownloadCvClick = async () => {
@@ -33,7 +39,7 @@ function Header({handleClickScroll}: IHeader) {
         const result = await response.json();
         const file_path: string = result.data[0].file_path;
         const file_name: string = result.data[0].file_name;
-        const file_request = await fetch(file_path)
+        const file_request = await fetch(file_path);
         const fileData = await file_request.blob();
         const url = window.URL.createObjectURL(fileData);
 
@@ -43,7 +49,7 @@ function Header({handleClickScroll}: IHeader) {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        
+
         reward();
       })
       .catch((error) => {
@@ -56,7 +62,9 @@ function Header({handleClickScroll}: IHeader) {
       <MainContent>
         <Logo src={ImgLogo.src} alt="img-logo" />
         {pages.map((item, index) => (
-          <Pages key={index} onClick={() => handleClickScroll(item)}>{item}</Pages>
+          <Pages key={index} onClick={() => handleClickScroll(item)}>
+            {item}
+          </Pages>
         ))}
         <div id="rewardId">
           <BtnDownloadResume

@@ -120,6 +120,6 @@ const Resume = forwardRef<HTMLDivElement, IResume>((props, ref) => {
       </ContainerResume>
     </>
   );
-})
+});
 
 export default Resume;

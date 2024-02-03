@@ -6,6 +6,7 @@ import {
   AboutMe,
   Resume,
   Projects,
+  Contact,
 } from "@/PortfolioUI";
 import { useRef } from "react";
 
@@ -16,7 +17,7 @@ function Home() {
 
   const scrollToComponent = (target: string) => {
     switch (target) {
-      case "ABOUT":
+      case "ABOUT ME":
         if (aboutMeRef.current) {
           window.scrollTo({
             top: aboutMeRef.current.offsetTop,
@@ -54,6 +55,7 @@ function Home() {
         <AboutMe ref={aboutMeRef} />
         <Resume ref={resumeRef} />
         <Projects ref={projectsRef} />
+        <Contact />
       </MainContent>
 
       <Footer />

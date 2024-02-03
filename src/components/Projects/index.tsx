@@ -1,6 +1,9 @@
 import { HTMLAttributes, forwardRef } from "react";
-import { ContainerProjects } from "src/styles/components/Projects/Projects.style";
-import { Text, Title } from "@/PortfolioUI";
+import {
+  ContainerProjects,
+  ContainerCardWorks,
+} from "src/styles/components/Projects/Projects.style";
+import { Text, Title, CardWorks } from "@/PortfolioUI";
 
 interface IProjects extends HTMLAttributes<HTMLDivElement> {}
 
@@ -16,6 +19,9 @@ const Projects = forwardRef<HTMLDivElement, IProjects>((props, ref) => {
           color={"#FFF"}
           marginBottom={"0px"}
         />
+        <ContainerCardWorks>
+          <CardWorks />
+        </ContainerCardWorks>
       </ContainerProjects>
     </>
   );

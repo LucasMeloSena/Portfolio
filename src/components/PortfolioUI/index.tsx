@@ -11,3 +11,5 @@ export { default as Icon } from "@/Icon";
 export { default as CardResume } from "@/CardResume";
 export { default as Stack } from "@/Stack";
 export { default as Projects } from "@/Projects";
+export { default as CardWorks } from "@/CardWorks";
+export { default as Contact } from "@/Contact";
