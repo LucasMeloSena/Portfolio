@@ -11,8 +11,18 @@ import {
 } from "src/styles/components/Contact/Contact.style";
 import { Title } from "@/PortfolioUI";
 import { ImgMessage } from "src/assets/img/index";
+import { InputMask } from "@react-input/mask";
+import { useState } from "react";
 
 function Contact() {
+  const [celular, setCelular] = useState<string>();
+  const [email, setEmail] = useState<string>();
+  const [nome, setNome] = useState<string>();
+  const [mensagem, setMensagem] = useState<string>();
+  const [assunto, setAssunto] = useState<string>();
+
+  const handleSendForm = () => {};
+
   return (
     <>
       <ContactContainer>
@@ -22,21 +32,50 @@ function Contact() {
           <ContainerField>
             <ContainerInputs>
               <LabelInput>Name:</LabelInput>
-              <InputContact type="text" />
+              <InputContact
+                type="text"
+                maxLength={50}
+                value={nome}
+                onChange={(event) => setNome(event.target.value)}
+              />
             </ContainerInputs>
             <ContainerInputs>
               <LabelInput>Email:</LabelInput>
-              <InputContact type="email" />
+              <InputContact
+                type="email"
+                maxLength={50}
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+              />
+            </ContainerInputs>
+            <ContainerInputs>
+              <LabelInput>Subject:</LabelInput>
+              <InputContact
+                type="text"
+                maxLength={50}
+                value={assunto}
+                onChange={(event) => setAssunto(event.target.value)}
+              />
             </ContainerInputs>
             <ContainerInputs>
               <LabelInput>Cell:</LabelInput>
-              <InputContact type="text" />
+              <InputMask
+                mask="+__ (__) 9 ____-____"
+                replacement={{ _: /\d/ }}
+                component={InputContact}
+                type="text"
+                value={celular}
+                onChange={(event) => setCelular(event.target.value)}
+              />
             </ContainerInputs>
             <ContainerInputs>
               <LabelInput>Message:</LabelInput>
-              <InputTextArea />
+              <InputTextArea
+                value={mensagem}
+                onChange={(event) => setMensagem(event.target.value)}
+              />
             </ContainerInputs>
-            <BtnEnviar>SEND</BtnEnviar>
+            <BtnEnviar onClick={handleSendForm}>SEND</BtnEnviar>
           </ContainerField>
         </ContainerForm>
       </ContactContainer>
