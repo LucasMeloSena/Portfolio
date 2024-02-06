@@ -1,0 +1,9 @@
+function Chart() {
+  return (
+    <>
+      <h1></h1>
+    </>
+  )
+}
+
+export default Chart

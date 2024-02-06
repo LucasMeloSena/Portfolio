@@ -14,6 +14,8 @@ function Home() {
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const resumeRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const awardsRef = useRef<HTMLDivElement>(null);
 
   const scrollToComponent = (target: string) => {
     switch (target) {
@@ -41,6 +43,22 @@ function Home() {
           });
         }
         break;
+      case "CONTACT":
+        if (contactRef.current) {
+          window.scrollTo({
+            top: contactRef.current.offsetTop,
+            behavior: "smooth",
+          });
+        }
+        break;
+      case "AWARDS AND CERTIFICATES":
+        if (awardsRef.current) {
+          window.scrollTo({
+            top: awardsRef.current.offsetTop,
+            behavior: "smooth",
+          });
+        }
+        break;
       default:
         break;
     }
@@ -55,7 +73,8 @@ function Home() {
         <AboutMe ref={aboutMeRef} />
         <Resume ref={resumeRef} />
         <Projects ref={projectsRef} />
-        <Contact />
+        <Contact ref={contactRef} />
+        {/* <Awards ref={awardsRef} /> */}
       </MainContent>
 
       <Footer />
