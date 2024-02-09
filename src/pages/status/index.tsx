@@ -1,5 +1,5 @@
 import { ContainerStatus } from "src/styles/pages/Status/Status.style";
-import { Header, Footer, Title, Details, Chart } from "@/PortfolioUI";
+import { Header, Footer, Title, Details, LineChart } from "@/PortfolioUI";
 
 function Status() {
   const scrollToComponent = (target: string) => {
@@ -29,7 +29,7 @@ function Status() {
 
       <ContainerStatus>
         <Title text={"Estatísticas e Status do Site"} />
-        <Chart />
+        <LineChart />
         <Details />
       </ContainerStatus>
 

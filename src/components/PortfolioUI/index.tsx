@@ -14,5 +14,5 @@ export { default as Projects } from "@/Home/Projects";
 export { default as CardWorks } from "@/Home/CardWorks";
 export { default as Contact } from "@/Home/Contact";
 export { default as Details } from "@/Status/Details";
-export { default as Chart } from "@/Status/Chart";
+export { default as LineChart } from "@/Status/Chart";
 export { default as CardInfo } from "@/Status/CardInfo";

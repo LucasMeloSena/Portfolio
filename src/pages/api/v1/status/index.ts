@@ -18,7 +18,7 @@ async function status(request: NextApiRequest, response: NextApiResponse) {
 
     const updateAt: string = new Date().toISOString();
 
-    const firstQueryTimer = performance.now()
+    const firstQueryTimer = performance.now();
     const serverVersionResult: QueryResult | undefined = await database.query(
       "SHOW server_version",
     );
@@ -45,7 +45,7 @@ async function status(request: NextApiRequest, response: NextApiResponse) {
       update_at: updateAt,
       dependencies: {
         database: {
-          status: 'healthy',
+          status: "healthy",
           version: serverVersionValue,
           max_connections: parseInt(maxConnectionsValue),
           opened_connections: openConnectionValue,
@@ -53,15 +53,15 @@ async function status(request: NextApiRequest, response: NextApiResponse) {
             first_query: firstQueryDuration.toFixed(0),
             second_query: secondQueryDuration.toFixed(0),
             third_query: thirdQueryDuration.toFixed(0),
-          }
+          },
         },
         webserver: {
-          status: 'healthy',
+          status: "healthy",
           provider: process.env.PROVIDER,
           environment: process.env.NODE_ENV,
           timezone: process.env.TZ || ":UTC-3",
-          version: process.version
-        }
+          version: process.version,
+        },
       },
     });
   } catch (error) {

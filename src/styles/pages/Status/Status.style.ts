@@ -9,4 +9,5 @@ export const ContainerStatus = styled.div`
   justify-content: center;
   align-items: center;
   gap: 40px;
+  margin-bottom: 70px;
 `;
