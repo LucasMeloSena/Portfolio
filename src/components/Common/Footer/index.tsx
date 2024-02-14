@@ -11,14 +11,14 @@ function Footer() {
     <>
       <ContainerFooter>
         <Text
-          text={`Copywrite ${data} - Todos os direitos reservados`}
+          text={`Copywrite ${data} - All rights reserved`}
           color={"#FFF"}
           fontSize={"18px"}
           fontWeight={"500"}
           marginBottom={"0px"}
         />
         <RedirectPage href="/status">
-          Clique aqui para ver o STATUS do site!
+          Click here to see the site's STATUS!
         </RedirectPage>
       </ContainerFooter>
     </>

@@ -10,3 +10,4 @@ export { default as ImgDatabase } from "src/assets/img/Home/database.png";
 export { default as ImgDevops } from "src/assets/img/Home/devops.png";
 export { default as ImgCloud } from "src/assets/img/Home/cloud.png";
 export { default as ImgMessage } from "src/assets/img/Home/message.png";
+export { default as ImgError } from "src/assets/img/Error/broken-light.png";

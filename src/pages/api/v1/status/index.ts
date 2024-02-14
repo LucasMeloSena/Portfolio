@@ -59,7 +59,7 @@ async function status(request: NextApiRequest, response: NextApiResponse) {
           status: "healthy",
           provider: process.env.PROVIDER,
           environment: process.env.NODE_ENV,
-          timezone: process.env.TZ || ":UTC-3",
+          timezone: process.env.TZ || ":UTC",
           version: process.version,
         },
       },
