@@ -16,3 +16,6 @@ export { default as Contact } from "@/Home/Contact";
 export { default as Details } from "@/Status/Details";
 export { default as LineChart } from "@/Status/Chart";
 export { default as CardInfo } from "@/Status/CardInfo";
+export { default as Awards } from "@/Home/Awards";
+export { default as Certificates } from "@/Home/Certificates";
+export { default as Slider } from "@/Home/Slider";

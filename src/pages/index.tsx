@@ -7,8 +7,11 @@ import {
   Resume,
   Projects,
   Contact,
+  Awards,
+  Certificates,
 } from "@/PortfolioUI";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+require("dotenv").config();
 
 function Home() {
   const aboutMeRef = useRef<HTMLDivElement>(null);
@@ -16,6 +19,14 @@ function Home() {
   const projectsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const awardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const endpoint = process.env.ENDPOINT || "";
+    const addAccess = async () => {
+      await fetch(`${endpoint}/api/v1/access`);
+    };
+    addAccess();
+  }, []);
 
   const scrollToComponent = (target: string) => {
     switch (target) {
@@ -73,8 +84,9 @@ function Home() {
         <AboutMe ref={aboutMeRef} />
         <Resume ref={resumeRef} />
         <Projects ref={projectsRef} />
+        <Awards ref={awardsRef} />
+        <Certificates />
         <Contact ref={contactRef} />
-        {/* <Awards ref={awardsRef} /> */}
       </MainContent>
 
       <Footer />

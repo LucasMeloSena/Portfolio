@@ -30,21 +30,17 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
         html: `Olá Lucas! <br> Meu nome é ${name} - Meu celular é ${cell} - Meu email é ${from} <br> <br> <b>Mensagem: </b>${text}`,
       });
 
-      res
-        .status(200)
-        .send({
-          message: "Email successfully sent!",
-          title: "Success!",
-          icon: "success",
-        });
+      res.status(200).send({
+        message: "Email successfully sent!",
+        title: "Success!",
+        icon: "success",
+      });
     } catch (error) {
-      res
-        .status(500)
-        .send({
-          message: (error as Error).message,
-          title: "Error!",
-          icon: "error",
-        });
+      res.status(500).send({
+        message: (error as Error).message,
+        title: "Error!",
+        icon: "error",
+      });
     }
   } else {
     res.status(405).end();
@@ -53,6 +49,8 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
 
 type ResponseData = {
   message: string;
+  title: string;
+  icon: string;
 };
 
 export default function handler(

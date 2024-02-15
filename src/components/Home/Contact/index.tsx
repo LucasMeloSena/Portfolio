@@ -44,6 +44,11 @@ const Contact = forwardRef<HTMLDivElement, IContact>((props, ref) => {
       .then(async (response) => {
         setLoader(false);
         const result = await response.json();
+        setAssunto("");
+        setEmail("");
+        setNome("");
+        setCelular("");
+        setMensagem("");
         Swal.fire({
           title: result.title,
           text: result.message,
@@ -113,7 +118,7 @@ const Contact = forwardRef<HTMLDivElement, IContact>((props, ref) => {
             <ContainerInputs>
               <LabelInput>Cell:</LabelInput>
               <InputMask
-                mask="+__ (__) 9 ____-____"
+                mask="(__) 9 ____-____"
                 replacement={{ _: /\d/ }}
                 component={InputContact}
                 type="text"
