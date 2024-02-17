@@ -6,7 +6,9 @@ import {
 } from "src/styles/components/Home/Awards/Awards.style";
 require("dotenv").config();
 
-interface IAwards extends HTMLAttributes<HTMLDivElement> {
+interface IAwards extends HTMLAttributes<HTMLDivElement> {}
+
+interface ICardAwards {
   title: string;
   descricao: string;
   company_name: string;
@@ -16,7 +18,7 @@ interface IAwards extends HTMLAttributes<HTMLDivElement> {
 }
 
 const Awards = forwardRef<HTMLDivElement, IAwards>((props, ref) => {
-  const [awards, setAwards] = useState<IAwards[]>([]);
+  const [awards, setAwards] = useState<ICardAwards[]>([]);
 
   useEffect(() => {
     async function getAwards() {
