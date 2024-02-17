@@ -123,6 +123,7 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props, ref) => {
             fontSize={"16px"}
             fontWeight={"400"}
             marginBottom={"0px"}
+            textAlign={"unset"}
           />
           <MainContent>
             <ContainerPresentationAndSkills>
@@ -139,6 +140,7 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props, ref) => {
                   fontSize={"20px"}
                   fontWeight={"600"}
                   marginBottom={"10px"}
+                  textAlign={"unset"}
                 />
                 <ContainerSkill>
                   {containerSkill.map((item, index) => (

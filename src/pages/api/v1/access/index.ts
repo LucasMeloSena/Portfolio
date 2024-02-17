@@ -51,13 +51,9 @@ type ResultSearchDatabase = {
   ip: string;
 };
 
-type ResponseData = {
-  message: string;
-};
-
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>,
+  res: NextApiResponse,
 ) {
   acess(req, res);
 }

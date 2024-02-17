@@ -22,6 +22,7 @@ function Stack({ image, nome, marginTop }: IStack) {
           fontSize={"16px"}
           fontWeight={"400"}
           marginBottom={"0px"}
+          textAlign={"unset"}
         />
       </ConteudoPrincipal>
     </>

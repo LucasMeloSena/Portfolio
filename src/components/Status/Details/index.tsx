@@ -131,6 +131,7 @@ function Details() {
             fontSize={"24px"}
             fontWeight={"600"}
             marginBottom={"0px"}
+            textAlign={"unset"}
           />
           {dataBaseInfo.map((item, index) => (
             <ContainerInfo key={index}>
@@ -140,6 +141,7 @@ function Details() {
                 fontSize={"14px"}
                 fontWeight={"300"}
                 marginBottom={"0px"}
+                textAlign={"unset"}
               />
               <CardInfo text={item.detail} />
             </ContainerInfo>
@@ -152,6 +154,7 @@ function Details() {
             fontSize={"24px"}
             fontWeight={"600"}
             marginBottom={"0px"}
+            textAlign={"unset"}
           />
           {serverInfo.map((item, index) => (
             <ContainerInfo key={index}>
@@ -161,6 +164,7 @@ function Details() {
                 fontSize={"14px"}
                 fontWeight={"300"}
                 marginBottom={"0px"}
+                textAlign={"unset"}
               />
               <CardInfo text={item.detail} />
             </ContainerInfo>

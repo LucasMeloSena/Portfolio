@@ -18,4 +18,5 @@ export { default as LineChart } from "@/Status/Chart";
 export { default as CardInfo } from "@/Status/CardInfo";
 export { default as Awards } from "@/Home/Awards";
 export { default as Certificates } from "@/Home/Certificates";
-export { default as Slider } from "@/Home/Slider";
+export { default as CardCertificates } from "@/Home/CardCertificates";
+export { default as CardAwards } from "@/Home/CardAwards"

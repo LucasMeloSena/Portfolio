@@ -15,6 +15,7 @@ function CardInfo({ text }: ICardInfo) {
           fontSize={"12px"}
           fontWeight={"400"}
           marginBottom={"0px"}
+          textAlign={"unset"}
         />
       </ContainerCardInfo>
     </>

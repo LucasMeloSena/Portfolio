@@ -2,15 +2,6 @@ import database from "src/infra/database";
 import { QueryResult } from "pg";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-interface IStatus {
-  update_at: Date;
-  dependencies: object;
-  database: object;
-  version: string;
-  max_connections: number;
-  opened_connections: number;
-}
-
 async function status(request: NextApiRequest, response: NextApiResponse) {
   try {
     //@ts-ignore
@@ -70,14 +61,9 @@ async function status(request: NextApiRequest, response: NextApiResponse) {
   }
 }
 
-type ResponseData = {
-  message: string;
-  data: IStatus[];
-};
-
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>,
+  res: NextApiResponse,
 ) {
   status(req, res);
 }

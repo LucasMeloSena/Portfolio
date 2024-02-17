@@ -1,15 +1,61 @@
-import { Title, Slider } from "@/PortfolioUI";
-import { HTMLAttributes, forwardRef } from "react";
-import { ContainerAwards } from "src/styles/components/Home/Awards/Awards.style";
+import { Title, CardAwards } from "@/PortfolioUI";
+import { HTMLAttributes, forwardRef, useEffect, useState } from "react";
+import {
+  ContainerAwards,
+  ContainerCardAwards,
+} from "src/styles/components/Home/Awards/Awards.style";
+require("dotenv").config();
 
-interface IAwards extends HTMLAttributes<HTMLDivElement> {}
+interface IAwards extends HTMLAttributes<HTMLDivElement> {
+  title: string;
+  descricao: string;
+  company_name: string;
+  dt_geracao: string;
+  pdf_path: string;
+  img_path: string;
+}
 
 const Awards = forwardRef<HTMLDivElement, IAwards>((props, ref) => {
+  const [awards, setAwards] = useState<IAwards[]>([]);
+
+  useEffect(() => {
+    async function getAwards() {
+      const endpoint = process.env.ENDPOINT || "";
+      await fetch(`${endpoint}/api/v1/awards`, {
+        method: "GET",
+      })
+        .then(async (response) => {
+          const result = await response.json();
+          for (let item of result.data.awards) {
+            let data: Date = new Date(item.dt_geracao);
+            item.dt_geracao = data.toLocaleDateString();
+          }
+          setAwards(result.data.awards);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+    getAwards();
+  }, []);
+
   return (
     <>
       <ContainerAwards {...props} ref={ref}>
         <Title text={"Awards"} />
-        <Slider />
+        <ContainerCardAwards>
+          {awards.map((item, index) => (
+            <CardAwards
+              key={index}
+              dt_geracao={item.dt_geracao}
+              titulo={item.title}
+              descricao={item.descricao}
+              img_path={item.img_path}
+              pdf_path={item.pdf_path}
+              company_name={item.company_name}
+            />
+          ))}
+        </ContainerCardAwards>
       </ContainerAwards>
     </>
   );

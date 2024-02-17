@@ -1,11 +1,6 @@
 import database from "src/infra/database";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-interface IFiles {
-  file_name: string;
-  file_path: string;
-}
-
 async function files(
   request: NextApiRequest,
   response: NextApiResponse,
@@ -31,14 +26,9 @@ async function files(
   }
 }
 
-type ResponseData = {
-  message: string;
-  data: IFiles[];
-};
-
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>,
+  res: NextApiResponse,
 ) {
   files(req, res);
 }

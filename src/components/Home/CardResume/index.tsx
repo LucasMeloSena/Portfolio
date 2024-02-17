@@ -18,6 +18,7 @@ function CardResume({ period, jobTitle, company, adress }: ICardResumeData) {
           color={"#fff"}
           text={period}
           marginBottom={"20px"}
+          textAlign={"unset"}
         />
         <Text
           fontSize={"20px"}
@@ -25,6 +26,7 @@ function CardResume({ period, jobTitle, company, adress }: ICardResumeData) {
           color={"#fff"}
           text={jobTitle}
           marginBottom={"5px"}
+          textAlign={"unset"}
         />
         <Text
           fontSize={"14px"}
@@ -32,6 +34,7 @@ function CardResume({ period, jobTitle, company, adress }: ICardResumeData) {
           color={"#fff"}
           text={company}
           marginBottom={"20px"}
+          textAlign={"unset"}
         />
         <Text
           fontSize={"14px"}
@@ -39,6 +42,7 @@ function CardResume({ period, jobTitle, company, adress }: ICardResumeData) {
           color={"#fff"}
           text={adress}
           marginBottom={"0px"}
+          textAlign={"unset"}
         />
       </ContainerCardResume>
     </>

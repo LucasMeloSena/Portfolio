@@ -30,6 +30,7 @@ function ErrorPage() {
             fontWeight={"400"}
             color={"#FFF"}
             marginBottom={"0px"}
+            textAlign={"unset"}
           />
           <BtnComeBack onClick={handleClickButton}>
             Return to home screen

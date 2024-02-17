@@ -1,13 +1,6 @@
 import database from "src/infra/database";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-interface IExperience {
-  periodo: string;
-  titulo: string;
-  empresa: string;
-  endereco: string;
-}
-
 async function experience(
   request: NextApiRequest,
   response: NextApiResponse,
@@ -32,14 +25,9 @@ async function experience(
   }
 }
 
-type ResponseData = {
-  message: string;
-  data: IExperience[];
-};
-
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>,
+  res: NextApiResponse,
 ) {
   experience(req, res);
 }

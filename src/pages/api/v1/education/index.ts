@@ -1,13 +1,6 @@
 import database from "src/infra/database";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-interface IEducation {
-  periodo: string;
-  titulo: string;
-  empresa: string;
-  endereco: string;
-}
-
 async function education(
   request: NextApiRequest,
   response: NextApiResponse,
@@ -32,14 +25,9 @@ async function education(
   }
 }
 
-type ResponseData = {
-  message: string;
-  data: IEducation[];
-};
-
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>,
+  res: NextApiResponse,
 ) {
   education(req, res);
 }

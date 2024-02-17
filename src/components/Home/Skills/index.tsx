@@ -15,6 +15,7 @@ function Skills({ text }: ISkills) {
           fontSize={"14px"}
           fontWeight={"300"}
           marginBottom={"0px"}
+          textAlign={"unset"}
         />
       </MainContent>
     </>

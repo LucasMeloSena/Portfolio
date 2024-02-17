@@ -6,9 +6,10 @@ interface IText {
   fontWeight: string;
   color: string;
   marginBottom: string;
+  textAlign: string;
 }
 
-function Title({ text, fontSize, fontWeight, color, marginBottom }: IText) {
+function Title({ text, fontSize, fontWeight, color, marginBottom, textAlign }: IText) {
   return (
     <>
       <DefaultText
@@ -16,6 +17,7 @@ function Title({ text, fontSize, fontWeight, color, marginBottom }: IText) {
         fontSize={fontSize}
         color={color}
         marginBottom={marginBottom}
+        textAlign={textAlign}
       >
         {text}
       </DefaultText>

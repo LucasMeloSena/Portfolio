@@ -16,6 +16,7 @@ function Footer() {
           fontSize={"18px"}
           fontWeight={"500"}
           marginBottom={"0px"}
+          textAlign={"unset"}
         />
         <RedirectPage href="/status">
           Click here to see the site's STATUS!

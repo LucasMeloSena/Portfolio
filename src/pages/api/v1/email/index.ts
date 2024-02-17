@@ -47,15 +47,9 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-type ResponseData = {
-  message: string;
-  title: string;
-  icon: string;
-};
-
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>,
+  res: NextApiResponse,
 ) {
   sendEmail(req, res);
 }
