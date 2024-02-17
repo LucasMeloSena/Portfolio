@@ -9,19 +9,25 @@ import {
 } from "src/styles/components/Home/CardAwards/CardAwards.style";
 
 interface ICardAwards {
-  dt_geracao: string,
-  titulo: string,
-  descricao: string,
-  img_path: string,
-  pdf_path: string,
-  company_name: string
+  dt_geracao: string;
+  titulo: string;
+  descricao: string;
+  img_path: string;
+  pdf_path: string;
+  company_name: string;
 }
 
-function CardAwards({dt_geracao, titulo, descricao,img_path,pdf_path,company_name}:ICardAwards) {
-
+function CardAwards({
+  dt_geracao,
+  titulo,
+  descricao,
+  img_path,
+  pdf_path,
+  company_name,
+}: ICardAwards) {
   const handleClickButtonView = (pdf_path: string) => {
-    window.open(pdf_path)
-  }
+    window.open(pdf_path);
+  };
 
   return (
     <>
@@ -64,7 +70,9 @@ function CardAwards({dt_geracao, titulo, descricao,img_path,pdf_path,company_nam
             marginBottom={"0px"}
             textAlign={"unset"}
           />
-          <BtnView onClick={() => handleClickButtonView(pdf_path)}>View</BtnView>
+          <BtnView onClick={() => handleClickButtonView(pdf_path)}>
+            View
+          </BtnView>
         </ContainerCompany>
       </ContainerCardAwards>
     </>

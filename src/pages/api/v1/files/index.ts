@@ -26,9 +26,6 @@ async function files(
   }
 }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   files(req, res);
 }

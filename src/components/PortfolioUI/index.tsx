@@ -19,4 +19,4 @@ export { default as CardInfo } from "@/Status/CardInfo";
 export { default as Awards } from "@/Home/Awards";
 export { default as Certificates } from "@/Home/Certificates";
 export { default as CardCertificates } from "@/Home/CardCertificates";
-export { default as CardAwards } from "@/Home/CardAwards"
+export { default as CardAwards } from "@/Home/CardAwards";

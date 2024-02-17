@@ -25,9 +25,6 @@ async function education(
   }
 }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   education(req, res);
 }

@@ -25,9 +25,6 @@ async function experience(
   }
 }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   experience(req, res);
 }

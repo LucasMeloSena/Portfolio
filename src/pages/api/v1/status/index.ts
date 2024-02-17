@@ -61,9 +61,6 @@ async function status(request: NextApiRequest, response: NextApiResponse) {
   }
 }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   status(req, res);
 }

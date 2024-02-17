@@ -9,7 +9,14 @@ interface IText {
   textAlign: string;
 }
 
-function Title({ text, fontSize, fontWeight, color, marginBottom, textAlign }: IText) {
+function Title({
+  text,
+  fontSize,
+  fontWeight,
+  color,
+  marginBottom,
+  textAlign,
+}: IText) {
   return (
     <>
       <DefaultText

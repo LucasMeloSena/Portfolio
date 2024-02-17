@@ -47,9 +47,6 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   sendEmail(req, res);
 }

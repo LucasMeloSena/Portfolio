@@ -48,9 +48,6 @@ async function skills(
   }
 }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   skills(req, res);
 }

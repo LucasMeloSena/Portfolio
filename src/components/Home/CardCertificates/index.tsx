@@ -2,7 +2,6 @@ import {
   ContainerCardCertificates,
   ContainerDados,
   ImageCertificado,
-  ContainerInfo,
 } from "src/styles/components/Home/CardCertificates/CardCertificates.style";
 import { Text } from "@/PortfolioUI";
 
@@ -21,9 +20,7 @@ function CardCertificates({
   dataEmissao,
   pdf_path,
 }: ICardCertificates) {
-  const handleClickImageCertificate = async (
-    pdf_path: string,
-  ) => {
+  const handleClickImageCertificate = async (pdf_path: string) => {
     window.open(pdf_path);
   };
 
@@ -33,8 +30,8 @@ function CardCertificates({
         id="rewardId"
         onClick={() => handleClickImageCertificate(pdf_path)}
       >
-        <ContainerInfo>
-          <ImageCertificado src={imgCertificado} alt="img-certificado" />
+        <ImageCertificado src={imgCertificado} alt="img-certificado" />
+        <ContainerDados>
           <Text
             text={nomeCeritificado}
             color={"#FFF"}
@@ -43,14 +40,12 @@ function CardCertificates({
             marginBottom={"0px"}
             textAlign={"unset"}
           />
-        </ContainerInfo>
-        <ContainerDados>
           <Text
             text={empresa}
             color={"#FFF"}
-            fontSize={"12px"}
-            fontWeight={"300"}
-            marginBottom={"0px"}
+            fontSize={"14px"}
+            fontWeight={"400"}
+            marginBottom={"10px"}
             textAlign={"left"}
           />
           <Text
@@ -59,7 +54,7 @@ function CardCertificates({
             fontSize={"12px"}
             fontWeight={"300"}
             marginBottom={"0px"}
-            textAlign={"right"}
+            textAlign={"unset"}
           />
         </ContainerDados>
       </ContainerCardCertificates>

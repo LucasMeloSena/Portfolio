@@ -26,9 +26,6 @@ async function certificates(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   certificates(req, res);
 }
