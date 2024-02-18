@@ -1,5 +1,5 @@
 # 🙋🏼‍♂️ Portfolio
-Welcome to my Portfolio
+Welcome to my Portfolio!
 
 ## 💡 Features
 This project fetches most of the data from a Postgres database, through the endpoints of a Rest Api. 
