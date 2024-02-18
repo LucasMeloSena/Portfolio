@@ -6,7 +6,6 @@ import {
 } from "src/styles/pages/ErrorPage/ErrorPage.style";
 import { ImgError } from "src/assets/img/index";
 import { Header, Footer, Title, Text } from "@/PortfolioUI";
-import { scrollToComponent } from "src/assets/utils/scroll-header";
 import { useRouter } from "next/router";
 
 function ErrorPage() {
@@ -14,6 +13,10 @@ function ErrorPage() {
 
   const handleClickButton = () => {
     router.push("/");
+  };
+
+  const scrollToComponent = () => {
+    window.location.href = "/";
   };
 
   return (
@@ -25,7 +28,7 @@ function ErrorPage() {
         <ContainerTexto>
           <Title text={"OPS..."} />
           <Text
-            text={"An unexpected error has occurred!"}
+            text={"Ocorreu um erro inesperado!"}
             fontSize={"16px"}
             fontWeight={"400"}
             color={"#FFF"}
@@ -33,7 +36,7 @@ function ErrorPage() {
             textAlign={"unset"}
           />
           <BtnComeBack onClick={handleClickButton}>
-            Return to home screen
+            Voltar para a página inicial
           </BtnComeBack>
         </ContainerTexto>
       </ContainerErrorPage>

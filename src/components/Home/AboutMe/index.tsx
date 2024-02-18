@@ -114,10 +114,10 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props, ref) => {
     <>
       <ContainerAboutMe {...props} ref={ref}>
         <DefaultContainer>
-          <Title text="About Me" />
+          <Title text="Sobre Mim" />
           <Text
             text={
-              "I have a passion for technology and how it can positively impact people's lives"
+              "Sou apaixonado por tecnologia e por como ela pode impactar positivamente a vida das pessoas!"
             }
             color={"#FFF"}
             fontSize={"16px"}
@@ -128,10 +128,10 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props, ref) => {
           <MainContent>
             <ContainerPresentationAndSkills>
               <PresentationText>
-                Hello! It's a pleasure know you! I'm 17 years old and graduated
-                em I.T Technician by Cotemig. I have a Entrepreneurial,
-                innovative profile, ease with changes, creative, curious,
-                critical thinking and teamwork.
+                Olá! É um prazer conhecê-lo! Tenho 17 anos e me formei em
+                Técnico em T.I. pelo Cotemig. Tenho um perfil empreendedor,
+                inovador, de liderança, que possui facilidade com mudanças,
+                criativo, curioso, pensamento crítico e trabalho em equipe.
               </PresentationText>
               <ContainerSkills>
                 <Text

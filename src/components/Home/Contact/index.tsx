@@ -84,7 +84,7 @@ const Contact = forwardRef<HTMLDivElement, IContact>((props, ref) => {
           </OverlayLoader>
         )}
 
-        <Title text={"Leave a message!"} />
+        <Title text={"Entre em contato!"} />
         <ContainerForm>
           <MessageImage src={ImgMessage.src} />
           <ContainerField>

@@ -44,7 +44,7 @@ const Awards = forwardRef<HTMLDivElement, IAwards>((props, ref) => {
   return (
     <>
       <ContainerAwards {...props} ref={ref}>
-        <Title text={"Awards"} />
+        <Title text={"Prêmios"} />
         <ContainerCardAwards>
           {awards.map((item, index) => (
             <CardAwards

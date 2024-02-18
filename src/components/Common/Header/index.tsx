@@ -16,11 +16,11 @@ interface IHeader {
 
 function Header({ handleClickScroll }: IHeader) {
   const pages: string[] = [
-    "ABOUT ME",
-    "RESUME",
-    "PROJECTS",
-    "AWARDS AND CERTIFICATES",
-    "CONTACT",
+    "SOBRE MIM",
+    "EXPERIÊNCIA",
+    "PROJETOS",
+    "PRÊMIOS E CERTIFICADOS",
+    "CONTATO",
   ];
   const { reward, isAnimating } = useReward("rewardId", "confetti");
 

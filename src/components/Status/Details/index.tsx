@@ -81,19 +81,19 @@ function Details() {
       detail: status.dependencies.database.status,
     },
     {
-      info: "Available Connections:",
+      info: "Conexões Disponíveis:",
       detail: conexoesDisponiveis,
     },
     {
-      info: "Open Connections:",
+      info: "Conexões Abertas:",
       detail: status.dependencies.database.opened_connections,
     },
     {
-      info: "Latency:",
+      info: "Latência:",
       detail: `${status.dependencies.database.latency.first_query}ms ${status.dependencies.database.latency.second_query}ms ${status.dependencies.database.latency.third_query}ms`,
     },
     {
-      info: "Postgres Version:",
+      info: "Versão Postgres:",
       detail: status.dependencies.database.version,
     },
   ];
@@ -104,11 +104,11 @@ function Details() {
       detail: status.dependencies.webserver.status,
     },
     {
-      info: "Provider:",
+      info: "Provedor:",
       detail: status.dependencies.webserver.provider,
     },
     {
-      info: "Environment:",
+      info: "Ambiente:",
       detail: status.dependencies.webserver.environment,
     },
     {
@@ -116,7 +116,7 @@ function Details() {
       detail: status.dependencies.webserver.timezone,
     },
     {
-      info: "Node.js version:",
+      info: "Versão Node.js:",
       detail: status.dependencies.webserver.version,
     },
   ];
@@ -126,7 +126,7 @@ function Details() {
       <ContainerDetails>
         <ContainerServers>
           <Text
-            text={"Database"}
+            text={"Banco de Dados"}
             color={"#FFF"}
             fontSize={"24px"}
             fontWeight={"600"}
@@ -149,7 +149,7 @@ function Details() {
         </ContainerServers>
         <ContainerServers>
           <Text
-            text={"Web Server"}
+            text={"Servidor Web"}
             color={"#FFF"}
             fontSize={"24px"}
             fontWeight={"600"}

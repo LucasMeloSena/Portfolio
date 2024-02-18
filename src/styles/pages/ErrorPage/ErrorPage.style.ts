@@ -33,7 +33,7 @@ export const BtnComeBack = styled.button`
   font-weight: 400;
   font-size: 14px;
   color: #fff;
-  width: 180px;
+  width: 220px;
   padding: 5px 0px 5px 0px;
   transition: all 0.5s;
   &:hover {

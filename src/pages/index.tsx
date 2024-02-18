@@ -30,7 +30,7 @@ function Home() {
 
   const scrollToComponent = (target: string) => {
     switch (target) {
-      case "ABOUT ME":
+      case "SOBRE MIM":
         if (aboutMeRef.current) {
           window.scrollTo({
             top: aboutMeRef.current.offsetTop,
@@ -38,7 +38,7 @@ function Home() {
           });
         }
         break;
-      case "RESUME":
+      case "EXPERIÊNCIA":
         if (resumeRef.current) {
           window.scrollTo({
             top: resumeRef.current.offsetTop,
@@ -46,7 +46,7 @@ function Home() {
           });
         }
         break;
-      case "PROJECTS":
+      case "PROJETOS":
         if (projectsRef.current) {
           window.scrollTo({
             top: projectsRef.current.offsetTop,
@@ -54,7 +54,7 @@ function Home() {
           });
         }
         break;
-      case "CONTACT":
+      case "CONTATO":
         if (contactRef.current) {
           window.scrollTo({
             top: contactRef.current.offsetTop,
@@ -62,7 +62,7 @@ function Home() {
           });
         }
         break;
-      case "AWARDS AND CERTIFICATES":
+      case "PRÊMIOS E CERTIFICADOS":
         if (awardsRef.current) {
           window.scrollTo({
             top: awardsRef.current.offsetTop,

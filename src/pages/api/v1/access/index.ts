@@ -19,17 +19,19 @@ async function acess(req: NextApiRequest, res: NextApiResponse) {
       });
 
     if (result) {
-      const date = new Date().toISOString().split("T")[0];
+      const date = new Date().toDateString();
 
       const cadastros = await database.query("SELECT * FROM ACESSO");
       if (cadastros.rows.length) {
         usuarioIgual = cadastros.rows.filter(
           (item: ResultSearchDatabase) => item.ip == result.ip,
         );
-        const compareDates = usuarioIgual[0].dt_acesso
-          .toISOString()
-          .split("T")[0];
-        if (compareDates == date) {
+        let dataCadastros = cadastros.rows;
+        let warmAcess = usuarioIgual.filter(
+          (item: ResultSearchDatabase, index: number) =>
+            item.dt_acesso == dataCadastros[index].dt_acesso,
+        );
+        if (warmAcess.length > 0) {
           throw new Error("Este usuário já acessou o site hoje!");
         }
       }
@@ -49,6 +51,7 @@ async function acess(req: NextApiRequest, res: NextApiResponse) {
 
 type ResultSearchDatabase = {
   ip: string;
+  dt_acesso: Date;
 };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

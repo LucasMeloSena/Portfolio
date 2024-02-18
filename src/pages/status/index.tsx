@@ -1,14 +1,17 @@
 import { ContainerStatus } from "src/styles/pages/Status/Status.style";
 import { Header, Footer, Title, Details, LineChart } from "@/PortfolioUI";
-import { scrollToComponent } from "src/assets/utils/scroll-header";
 
 function Status() {
+  const scrollToComponent = () => {
+    window.location.href = "/";
+  };
+
   return (
     <>
       <Header handleClickScroll={scrollToComponent} />
 
       <ContainerStatus>
-        <Title text={"Site Statistics and Status"} />
+        <Title text={"Estatísticas e Status do Site"} />
         <LineChart />
         <Details />
       </ContainerStatus>

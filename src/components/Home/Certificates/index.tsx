@@ -42,7 +42,7 @@ function Certificates() {
   return (
     <>
       <ContainerCertificates>
-        <Title text={"Certificates"} />
+        <Title text={"Certificados"} />
         <ContainerCards>
           {certificates.map((item, index) => (
             <CardCertificates

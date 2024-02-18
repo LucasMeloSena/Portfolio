@@ -68,7 +68,7 @@ const Resume = forwardRef<HTMLDivElement, IResume>((props, ref) => {
   return (
     <>
       <ContainerResume {...props} ref={ref}>
-        <Title text={"Resume"} />
+        <Title text={"Experiência"} />
         <ContainerAreas>
           <ContainerEducation>
             <ContainerArea>
@@ -81,7 +81,7 @@ const Resume = forwardRef<HTMLDivElement, IResume>((props, ref) => {
                 fontSize={"18px"}
                 fontWeight={"700"}
                 color={"#fff"}
-                text={"Education"}
+                text={"Acadêmica"}
                 marginBottom={"0px"}
                 textAlign={"unset"}
               />
@@ -103,7 +103,7 @@ const Resume = forwardRef<HTMLDivElement, IResume>((props, ref) => {
                 fontSize={"18px"}
                 fontWeight={"700"}
                 color={"#fff"}
-                text={"Experience"}
+                text={"Profissional"}
                 marginBottom={"0px"}
                 textAlign={"unset"}
               />
