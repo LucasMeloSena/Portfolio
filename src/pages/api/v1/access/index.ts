@@ -8,7 +8,7 @@ async function acess(req: NextApiRequest, res: NextApiResponse) {
   try {
     let result: any;
     let usuarioIgual;
-    await fetch("https://api.ipify.org/?format=json", {
+    await fetch("http://ip-api.com/json/", {
       method: "GET",
     })
       .then(async (response) => {
@@ -24,7 +24,7 @@ async function acess(req: NextApiRequest, res: NextApiResponse) {
       const cadastros = await database.query("SELECT * FROM ACESSO");
       if (cadastros.rows.length) {
         usuarioIgual = cadastros.rows.filter(
-          (item: ResultSearchDatabase) => item.ip == result.ip,
+          (item: ResultSearchDatabase) => item.ip == result.query,
         );
         let dataCadastros = cadastros.rows;
         let warmAcess = usuarioIgual.filter(
@@ -38,7 +38,7 @@ async function acess(req: NextApiRequest, res: NextApiResponse) {
 
       await database.query({
         text: "INSERT INTO acesso (IP, DT_ACESSO) VALUES ($1, $2)",
-        values: [result.ip, date],
+        values: [result.query, date],
       });
       res.status(201).send({ message: "Acesso adicionado com sucesso!" });
     } else {

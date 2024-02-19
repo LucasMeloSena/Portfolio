@@ -1,11 +1,14 @@
 # 🙋🏼‍♂️ Portfolio
+
 Welcome to my Portfolio!
 
 ## 💡 Features
-This project fetches most of the data from a Postgres database, through the endpoints of a Rest Api. 
+
+This project fetches most of the data from a Postgres database, through the endpoints of a Rest Api.
 Functionalities such as sending a contact form and generating a statistics chart were developed using the nodemailer and chart.js libraries.
 
-## ⚒️ Technologies 
+## ⚒️ Technologies
+
 - TypeScript
 - React
 - Styled-Components
@@ -22,4 +25,5 @@ Functionalities such as sending a contact form and generating a statistics chart
 - API Rest
 
 ## 💻 Usage
-You can access the project from this link:  <a href="https://lucasena.dev.br"> Portfolio </a>
+
+You can access the project from this link: <a href="https://lucasena.dev.br"> Portfolio </a>
