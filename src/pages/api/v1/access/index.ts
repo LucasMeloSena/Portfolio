@@ -12,18 +12,15 @@ async function acess(req: NextApiRequest, res: NextApiResponse) {
     const date = new Date().toDateString();
 
     const cadastros = await database.query("SELECT * FROM ACESSO");
-    console.log(cadastros)
     if (cadastros.rows.length) {
       usuarioIgual = cadastros.rows.filter(
         (item: ResultSearchDatabase) => item.ip == ipAdress,
       );
-      console.log(usuarioIgual)
-      let dataCadastros = cadastros.rows;
       let warmAcess = usuarioIgual.filter(
-        (item: ResultSearchDatabase, index: number) =>
-          item.dt_acesso == dataCadastros[index].dt_acesso,
-      );
-      console.log(warmAcess)
+        (item: ResultSearchDatabase) => {
+        const itemDate = new Date(item.dt_acesso).toDateString();
+        return itemDate === date;
+      })
       if (warmAcess.length > 0) {
         throw new Error("Este usuário já acessou o site hoje!");
       }
