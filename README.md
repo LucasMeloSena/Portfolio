@@ -14,11 +14,9 @@ Functionalities such as sending a contact form and generating a statistics chart
 - Styled-Components
 - Node.js
 - Next.js
-- Jest
-- Testes automatizados e de integração
+- Jest - Testes automatizados
 - CI | CD
 - Docker
-- Nvm
 - PostgreSQL
 - Estilização de código - Prettier
 - TDD
