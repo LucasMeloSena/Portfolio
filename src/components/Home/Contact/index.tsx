@@ -44,11 +44,13 @@ const Contact = forwardRef<HTMLDivElement, IContact>((props, ref) => {
       .then(async (response) => {
         setLoader(false);
         const result = await response.json();
-        setAssunto("");
-        setEmail("");
-        setNome("");
-        setCelular("");
-        setMensagem("");
+        if (response.status == 200) {
+          setAssunto("");
+          setEmail("");
+          setNome("");
+          setCelular("");
+          setMensagem("");
+        }
         Swal.fire({
           title: result.title,
           text: result.message,
