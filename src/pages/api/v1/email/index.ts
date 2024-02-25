@@ -7,19 +7,19 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
       const { from, subject, text, name, cell } = JSON.parse(req.body);
 
       if (!from || from.toString().trim() == "") {
-        throw new Error("Empty email field!");
+        throw new Error("Campo EMAIL vazio!");
       }
       if (!subject || subject.toString().trim() == "") {
-        throw new Error("Empty subject field!");
+        throw new Error("Campo ASSUNTO vazio!");
       }
       if (!text || text.toString().trim() == "") {
-        throw new Error("Empty message field!");
+        throw new Error("Campo MENSAGEM vazio!");
       }
       if (!name || name.toString().trim() == "") {
-        throw new Error("Empty name field!");
+        throw new Error("Campo NOME vazio!");
       }
       if (!cell || cell.toString().trim() == "") {
-        throw new Error("Empty cell field!");
+        throw new Error("Campo CELULAR vazio!");
       }
 
       await transporter.sendMail({
@@ -31,14 +31,14 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
       });
 
       res.status(200).send({
-        message: "Email successfully sent!",
-        title: "Success!",
+        message: "Email enviado com sucesso!",
+        title: "Sucesso!",
         icon: "success",
       });
     } catch (error) {
       res.status(500).send({
         message: (error as Error).message,
-        title: "Error!",
+        title: "Erro!",
         icon: "error",
       });
     }
