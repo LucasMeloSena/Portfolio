@@ -10,4 +10,7 @@ export const ContainerStatus = styled.div`
   align-items: center;
   gap: 40px;
   margin-bottom: 70px;
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
 `;

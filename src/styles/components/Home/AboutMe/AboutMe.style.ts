@@ -9,6 +9,9 @@ export const ContainerAboutMe = styled.div`
   align-items: center;
   gap: 150px;
   padding: 0px 100px 0px 100px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const DefaultContainer = styled.div``;
@@ -30,7 +33,7 @@ export const ContainerPresentationAndSkills = styled.div`
 
 export const PresentationText = styled.h4`
   margin-top: 20px !important;
-  width: 400px;
+  width: 100%;
   color: #fff;
   font-family: Poppins;
   font-size: 15px;
@@ -63,4 +66,7 @@ export const ContainerFrameStacks = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

@@ -9,6 +9,11 @@ export const ContainerDetails = styled.div`
   align-items: center;
   gap: 180px;
   margin-top: 20px;
+  @media (max-width: 768px) {
+    height: auto;
+    gap: 60px;
+    flex-direction: column;
+  }
 `;
 
 export const ContainerServers = styled.div`

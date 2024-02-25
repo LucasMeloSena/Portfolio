@@ -89,7 +89,7 @@ const Contact = forwardRef<HTMLDivElement, IContact>((props, ref) => {
           <MessageImage src={ImgMessage.src} />
           <ContainerField>
             <ContainerInputs>
-              <LabelInput>Name:</LabelInput>
+              <LabelInput>Nome:</LabelInput>
               <InputContact
                 type="text"
                 maxLength={50}
@@ -107,7 +107,7 @@ const Contact = forwardRef<HTMLDivElement, IContact>((props, ref) => {
               />
             </ContainerInputs>
             <ContainerInputs>
-              <LabelInput>Subject:</LabelInput>
+              <LabelInput>Assunto:</LabelInput>
               <InputContact
                 type="text"
                 maxLength={50}
@@ -116,7 +116,7 @@ const Contact = forwardRef<HTMLDivElement, IContact>((props, ref) => {
               />
             </ContainerInputs>
             <ContainerInputs>
-              <LabelInput>Cell:</LabelInput>
+              <LabelInput>Celular:</LabelInput>
               <InputMask
                 mask="(__) 9 ____-____"
                 replacement={{ _: /\d/ }}
@@ -127,7 +127,7 @@ const Contact = forwardRef<HTMLDivElement, IContact>((props, ref) => {
               />
             </ContainerInputs>
             <ContainerInputs>
-              <LabelInput>Message:</LabelInput>
+              <LabelInput>Mensagem:</LabelInput>
               <InputTextArea
                 value={mensagem}
                 onChange={(event) => setMensagem(event.target.value)}

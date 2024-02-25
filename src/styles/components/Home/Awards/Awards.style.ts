@@ -12,6 +12,9 @@ export const ContainerAwards = styled.div`
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
+  @media (max-width: 768px) {
+    padding: 40px 20px 40px 20px;
+  }
 `;
 
 export const ContainerCardAwards = styled.div`
@@ -21,4 +24,7 @@ export const ContainerCardAwards = styled.div`
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
+  @media (max-width: 768px) {
+    gap: 0px;
+  }
 `;

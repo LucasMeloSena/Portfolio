@@ -7,8 +7,8 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   background-color: #1b2029;
 }
 

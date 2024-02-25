@@ -8,6 +8,9 @@ export const ContainerFooter = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5px;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const RedirectPage = styled.a`

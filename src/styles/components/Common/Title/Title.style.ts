@@ -7,4 +7,5 @@ export const DefaultTitle = styled.h1`
   font-style: normal;
   font-weight: 700 !important;
   line-height: 1.2em;
+  text-align: center;
 `;

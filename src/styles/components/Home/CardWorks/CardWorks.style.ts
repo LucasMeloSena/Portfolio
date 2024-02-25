@@ -12,6 +12,9 @@ export const MainContent = styled.div`
     transition: all 0.5s;
     transform: translateY(-10px);
   }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const ImgProject = styled.img`

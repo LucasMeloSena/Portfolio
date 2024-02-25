@@ -12,6 +12,9 @@ export const ContactContainer = styled.div`
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 export const ContainerForm = styled.div`
   margin-top: 70px;
@@ -21,6 +24,11 @@ export const ContainerForm = styled.div`
   justify-content: center;
   align-items: flex-start;
   gap: 150px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
 `;
 
 export const ContainerInputs = styled.div`
@@ -56,11 +64,18 @@ export const InputContact = styled.input`
     transition: all 0.5s;
     box-shadow: #fff 0px 0px 8px;
   }
+  @media (max-width: 768px) {
+    width: 300px;
+  }
 `;
 
 export const MessageImage = styled.img`
   width: 464px;
   height: 464px;
+  @media (max-width: 768px) {
+    width: 264px;
+    height: 264px;
+  }
 `;
 
 export const LabelInput = styled.h3`
@@ -86,6 +101,9 @@ export const InputTextArea = styled.textarea`
     outline: none;
     transition: all 0.5s;
     box-shadow: #fff 0px 0px 8px;
+  }
+  @media (max-width: 768px) {
+    width: 300px;
   }
 `;
 

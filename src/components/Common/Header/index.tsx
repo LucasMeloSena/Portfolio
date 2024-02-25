@@ -1,17 +1,22 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
   MainContent,
   Logo,
   Pages,
   BtnDownloadResume,
+  BtnHeaderResponsive,
+  ContainerResponsive,
+  BtnMenu,
+  ContainerMenuResponsive,
 } from "src/styles/components/Common/Header/Header.style";
 import { ImgLogo } from "src/assets/img/index";
+import { Icon } from "@/PortfolioUI";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useReward } from "react-rewards";
-import { Icon } from "@/PortfolioUI";
 require("dotenv").config();
 
 interface IHeader {
-  handleClickScroll: (info: string) => void;
+  handleClickScroll: (target: string) => void;
 }
 
 function Header({ handleClickScroll }: IHeader) {
@@ -22,6 +27,7 @@ function Header({ handleClickScroll }: IHeader) {
     "PRÊMIOS E CERTIFICADOS",
     "CONTATO",
   ];
+
   const { reward, isAnimating } = useReward("rewardId", "confetti");
 
   const handleDownloadCvClick = async () => {
@@ -59,22 +65,50 @@ function Header({ handleClickScroll }: IHeader) {
 
   return (
     <>
-      <MainContent>
-        <Logo src={ImgLogo.src} alt="img-logo" />
-        {pages.map((item, index) => (
-          <Pages key={index} onClick={() => handleClickScroll(item)}>
-            {item}
-          </Pages>
-        ))}
-        <div id="rewardId">
-          <BtnDownloadResume
-            disabled={isAnimating}
-            onClick={handleDownloadCvClick}
+      <MainContent className="navbar navbar-expand-lg bg-body-tertiary">
+        <ContainerResponsive className="container-fluid">
+          <a className="navbar-brand" href="/">
+            <Logo src={ImgLogo.src} alt="logo" />
+          </a>
+          <BtnHeaderResponsive
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            Download CV
-            <Icon icon={faArrowDown} fontSize={"14px"} />
-          </BtnDownloadResume>
-        </div>
+            <BtnMenu></BtnMenu>
+          </BtnHeaderResponsive>
+          <ContainerMenuResponsive
+            className="collapse navbar-collapse"
+            id="navbarNavDropdown"
+          >
+            <ul className="navbar-nav">
+              {pages.map((item, index) => (
+                <li className="nav-item" key={index}>
+                  <Pages
+                    className="nav-link active"
+                    aria-current="page"
+                    onClick={() => handleClickScroll(item)}
+                  >
+                    {item}
+                  </Pages>
+                </li>
+              ))}
+            </ul>
+            <div id="rewardId">
+              <BtnDownloadResume
+                disabled={isAnimating}
+                onClick={handleDownloadCvClick}
+              >
+                Download CV
+                <Icon icon={faArrowDown} fontSize={"14px"} />
+              </BtnDownloadResume>
+            </div>
+          </ContainerMenuResponsive>
+        </ContainerResponsive>
       </MainContent>
     </>
   );

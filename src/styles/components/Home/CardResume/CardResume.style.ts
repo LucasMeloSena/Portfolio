@@ -11,4 +11,7 @@ export const ContainerCardResume = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: 10px 20px 10px 20px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;

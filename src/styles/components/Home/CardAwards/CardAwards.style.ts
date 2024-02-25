@@ -11,6 +11,9 @@ export const ContainerCardAwards = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const ContainerTexto = styled.div`

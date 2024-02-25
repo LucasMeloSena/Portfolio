@@ -15,6 +15,11 @@ export const ContainerCardCertificates = styled.div`
     cursor: pointer;
     transform: translateY(-20px);
   }
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+  }
 `;
 
 export const ContainerDados = styled.div`

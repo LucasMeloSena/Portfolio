@@ -8,6 +8,9 @@ export const ContainerProjects = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0px 100px 0px 100px;
+  @media (max-width: 768px) {
+    padding: 0px 40px 0px 40px;
+  }
 `;
 
 export const ContainerCardWorks = styled.div`

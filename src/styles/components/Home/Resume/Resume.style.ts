@@ -20,6 +20,10 @@ export const ContainerEducation = styled.div`
   justify-content: center;
   align-items: center;
   gap: 30px;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+  }
 `;
 
 export const ContainerExperience = styled.div`
@@ -28,6 +32,10 @@ export const ContainerExperience = styled.div`
   justify-content: center;
   align-items: center;
   gap: 30px;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0px 20px 0px 20px;
+  }
 `;
 
 export const ContainerAreas = styled.div`
@@ -38,6 +46,10 @@ export const ContainerAreas = styled.div`
   align-items: flex-start;
   gap: 200px;
   width: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 60px;
+  }
 `;
 export const ContainerArea = styled.div`
   display: flex;

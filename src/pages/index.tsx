@@ -1,4 +1,4 @@
-import { MainContent } from "src/styles/pages/Home/Home.style";
+import { Site, MainContent } from "src/styles/pages/Home/Home.style";
 import {
   Header,
   Footer,
@@ -29,6 +29,7 @@ function Home() {
   }, []);
 
   const scrollToComponent = (target: string) => {
+    console.log(target);
     switch (target) {
       case "SOBRE MIM":
         if (aboutMeRef.current) {
@@ -77,19 +78,21 @@ function Home() {
 
   return (
     <>
-      <Header handleClickScroll={scrollToComponent} />
+      <Site>
+        <Header handleClickScroll={scrollToComponent} />
 
-      <MainContent>
-        <Introduction />
-        <AboutMe ref={aboutMeRef} />
-        <Resume ref={resumeRef} />
-        <Projects ref={projectsRef} />
-        <Awards ref={awardsRef} />
-        <Certificates />
-        <Contact ref={contactRef} />
-      </MainContent>
+        <MainContent>
+          <Introduction />
+          <AboutMe ref={aboutMeRef} />
+          <Resume ref={resumeRef} />
+          <Projects ref={projectsRef} />
+          <Awards ref={awardsRef} />
+          <Certificates />
+          <Contact ref={contactRef} />
+        </MainContent>
 
-      <Footer />
+        <Footer />
+      </Site>
     </>
   );
 }

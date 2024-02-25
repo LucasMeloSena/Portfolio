@@ -7,7 +7,8 @@ async function acess(req: NextApiRequest, res: NextApiResponse) {
 
   try {
     let usuarioIgual;
-    const ipAdress = req.headers["x-real-ip"] || req.headers["x-forwarded-for"];
+    const ipAdress =
+      req.headers["x-real-ip"] || req.headers["x-forwarded-for"] || "";
 
     const date = new Date().toDateString();
 
@@ -16,11 +17,10 @@ async function acess(req: NextApiRequest, res: NextApiResponse) {
       usuarioIgual = cadastros.rows.filter(
         (item: ResultSearchDatabase) => item.ip == ipAdress,
       );
-      let warmAcess = usuarioIgual.filter(
-        (item: ResultSearchDatabase) => {
+      let warmAcess = usuarioIgual.filter((item: ResultSearchDatabase) => {
         const itemDate = new Date(item.dt_acesso).toDateString();
         return itemDate === date;
-      })
+      });
       if (warmAcess.length > 0) {
         throw new Error("Este usuário já acessou o site hoje!");
       }
@@ -32,7 +32,7 @@ async function acess(req: NextApiRequest, res: NextApiResponse) {
     });
     res.status(201).send({ message: "Acesso adicionado com sucesso!" });
   } catch (error) {
-    res.status(500).send({ message: (error as Error).message });
+    res.status(200).send({ message: (error as Error).message });
   }
 }
 

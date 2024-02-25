@@ -4,11 +4,9 @@ import {
   DefaultText,
   ContainerSocialMedia,
   ContainerIcon,
-  ContainerImages,
-  BigL,
-  Bow,
   LucasSena,
   KnowledgeContainer,
+  MainContainer,
 } from "src/styles/components/Home/Introduction/Introduction.style";
 import {
   faCode,
@@ -21,7 +19,7 @@ import {
   IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
 import { CardField, Icon } from "@/PortfolioUI";
-import { ImgBow, ImgBigL, ImgLucasSena } from "src/assets/img/index";
+import { ImgLucasSena } from "src/assets/img/index";
 
 interface KnowLedge {
   nome: string;
@@ -78,59 +76,57 @@ function Introduction() {
 
   return (
     <>
-      <PresentationContainer>
-        <PresentationTextContainer>
-          <DefaultText
-            color={"#FFF"}
-            fontWeight={"700"}
-            fontSize={"25px"}
-            lineHeight={"1.2em"}
-          >
-            Hey There,
-          </DefaultText>
-          <DefaultText
-            color={"#FFF"}
-            fontWeight={"700"}
-            fontSize={"50px"}
-            lineHeight={"1em"}
-          >
-            I'm Lucas Sena
-          </DefaultText>
-          <DefaultText
-            color={"rgba(255, 255, 255, 0.80)"}
-            fontWeight={"500"}
-            fontSize={"18px"}
-            lineHeight={"1.2em"}
-          >
-            Full Stack Developer
-          </DefaultText>
-          <ContainerSocialMedia>
-            {socialMediaIcons.map((item, index) => (
-              <ContainerIcon
-                key={index}
-                onClick={() => handleClickSocialIcon(item.name)}
-              >
-                <Icon icon={item.iconSocialMedia} color={"#1b2029"} />
-              </ContainerIcon>
-            ))}
-          </ContainerSocialMedia>
-        </PresentationTextContainer>
-        <ContainerImages>
-          <BigL src={ImgBigL.src} alt="big-l" />
+      <MainContainer>
+        <PresentationContainer>
+          <PresentationTextContainer>
+            <DefaultText
+              color={"#FFF"}
+              fontWeight={"600"}
+              fontSize={"22px"}
+              lineHeight={"20px"}
+            >
+              Hey There,
+            </DefaultText>
+            <DefaultText
+              color={"#FFF"}
+              fontWeight={"700"}
+              fontSize={"40px"}
+              lineHeight={"30px"}
+            >
+              I'm Lucas Sena
+            </DefaultText>
+            <DefaultText
+              color={"rgba(255, 255, 255, 0.80)"}
+              fontWeight={"500"}
+              fontSize={"18px"}
+              lineHeight={"20px"}
+            >
+              Full Stack Developer
+            </DefaultText>
+            <ContainerSocialMedia>
+              {socialMediaIcons.map((item, index) => (
+                <ContainerIcon
+                  key={index}
+                  onClick={() => handleClickSocialIcon(item.name)}
+                >
+                  <Icon icon={item.iconSocialMedia} color={"#1b2029"} />
+                </ContainerIcon>
+              ))}
+            </ContainerSocialMedia>
+          </PresentationTextContainer>
           <LucasSena src={ImgLucasSena.src} alt="lucasena" />
-          <Bow src={ImgBow.src} alt="bow" />
-        </ContainerImages>
-      </PresentationContainer>
+        </PresentationContainer>
 
-      <KnowledgeContainer>
-        {knowledge.map((item, index) => (
-          <CardField
-            key={index}
-            mainText={item.nome}
-            iconKnowledge={item.iconKnowLedge}
-          />
-        ))}
-      </KnowledgeContainer>
+        <KnowledgeContainer>
+          {knowledge.map((item, index) => (
+            <CardField
+              key={index}
+              mainText={item.nome}
+              iconKnowledge={item.iconKnowLedge}
+            />
+          ))}
+        </KnowledgeContainer>
+      </MainContainer>
     </>
   );
 }
