@@ -135,7 +135,7 @@ const Contact = forwardRef<HTMLDivElement, IContact>((props, ref) => {
                 onChange={(event) => setMensagem(event.target.value)}
               />
             </ContainerInputs>
-            <BtnEnviar onClick={handleSendForm}>SEND</BtnEnviar>
+            <BtnEnviar onClick={handleSendForm}>ENVIAR</BtnEnviar>
           </ContainerField>
         </ContainerForm>
       </ContactContainer>
