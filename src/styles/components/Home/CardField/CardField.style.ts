@@ -19,15 +19,6 @@ export const MainContent = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  transition: all 0.5s;
-  &:hover {
-    cursor: pointer;
-    transition: all 0.5s;
-    background-color: #fff;
-    & ${MainText} {
-      color: #1b2029;
-    }
-  }
   @media (max-width: 768px) {
     width: 100%;
   }

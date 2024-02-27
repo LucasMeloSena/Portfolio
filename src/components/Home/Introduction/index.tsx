@@ -61,7 +61,7 @@ function Introduction() {
   const handleClickSocialIcon = (name: string) => {
     const redirect: { [name: string]: () => void } = {
       LinkedIn() {
-        window.open("https://www.linkedin.com/in/lucas-sena-282311234");
+        window.open("https://www.linkedin.com/in/lucasmelosena/");
       },
       GitHub() {
         window.open("https://github.com/LucasMeloSena");
