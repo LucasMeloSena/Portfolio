@@ -1,13 +1,13 @@
 import { Client } from "pg";
 
 async function query(queryObject: any) {
-  const environment = process.env.NODE_ENV;
-  const connection =
-    environment == "production"
-      ? `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@${process.env.POSTGRES_HOST}:${process.env.POSTGRES_PORT}/${process.env.POSTGRES_DATABASE}?sslmode=require`
-      : `postgres://${process.env.POSTGRES_USER}:${process.env.POSTGRES_PASSWORD}@${process.env.POSTGRES_HOST}:${process.env.POSTGRES_PORT}/${process.env.POSTGRES_DATABASE}`;
   const client = new Client({
-    connectionString: connection,
+    host: process.env.POSTGRES_HOST,
+    port: parseInt(process.env.POSTGRES_PORT ?? "5432", 10),
+    user: process.env.POSTGRES_USER,
+    database: process.env.POSTGRES_DATABASE,
+    password: process.env.POSTGRES_PASSWORD,
+    ssl: getSSLValues(),
   });
   try {
     await client.connect();
@@ -23,3 +23,7 @@ async function query(queryObject: any) {
 export default {
   query: query,
 };
+
+function getSSLValues() {
+  return process.env.NODE_ENV == "development" ? false : true;
+}
