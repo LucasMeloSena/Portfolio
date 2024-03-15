@@ -128,7 +128,7 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props, ref) => {
           <MainContent>
             <ContainerPresentationAndSkills>
               <PresentationText>
-                Olá! É um prazer conhecê-lo! Tenho 17 anos e me formei em
+                Olá! É um prazer conhecê-lo! Tenho 18 anos e me formei em
                 Técnico em T.I. pelo Cotemig. Tenho um perfil empreendedor,
                 inovador, de liderança, que possui facilidade com mudanças,
                 criativo, curioso, pensamento crítico e trabalho em equipe.
