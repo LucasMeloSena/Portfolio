@@ -8,7 +8,7 @@ async function projects(req: NextApiRequest, res: NextApiResponse) {
 
     const projectsResult = await database.query({
       text: `SELECT PROJECTS.*, FILES.FILE_PATH FROM PROJECTS 
-      JOIN FILES ON PROJECTS.COD_IMAGE = FILES.CODIGO`,
+      JOIN FILES ON PROJECTS.COD_IMAGE = FILES.CODIGO ORDER BY CODIGO DESC`,
     });
     const projectsValue = projectsResult.rows;
 

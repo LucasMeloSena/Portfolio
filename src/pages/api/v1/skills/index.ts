@@ -9,22 +9,22 @@ async function skills(
     //@ts-ignore
     request;
 
-    const frontendResult = await database.query("SELECT * FROM FRONTEND");
+    const frontendResult = await database.query("SELECT * FROM FRONTEND ORDER BY CODIGO");
     const frontendValue = frontendResult.rows;
 
-    const backendResult = await database.query("SELECT * FROM BACKEND");
+    const backendResult = await database.query("SELECT * FROM BACKEND ORDER BY CODIGO");
     const backendValue = backendResult.rows;
 
-    const mobileResult = await database.query("SELECT * FROM MOBILE");
+    const mobileResult = await database.query("SELECT * FROM MOBILE ORDER BY CODIGO");
     const mobileValue = mobileResult.rows;
 
-    const databasesResult = await database.query("SELECT * FROM DATABASES");
+    const databasesResult = await database.query("SELECT * FROM DATABASES ORDER BY CODIGO");
     const databasesValue = databasesResult.rows;
 
-    const deveopsResult = await database.query("SELECT * FROM DEVOPS");
+    const deveopsResult = await database.query("SELECT * FROM DEVOPS ORDER BY CODIGO");
     const devopsValue = deveopsResult.rows;
 
-    const cloudResult = await database.query("SELECT * FROM CLOUD");
+    const cloudResult = await database.query("SELECT * FROM CLOUD ORDER BY CODIGO");
     const cloudValue = cloudResult.rows;
 
     response.status(200).json({

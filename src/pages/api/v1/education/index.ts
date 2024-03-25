@@ -9,7 +9,7 @@ async function education(
     //@ts-ignore
     request;
 
-    const educationResult = await database.query("SELECT * FROM EDUCATION");
+    const educationResult = await database.query("SELECT * FROM EDUCATION ORDER BY CODIGO DESC");
     const educationValue = educationResult.rows;
 
     response.status(200).json({
