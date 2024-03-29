@@ -1,0 +1,125 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model acesso {
+  codigo    Int      @id @default(autoincrement())
+  ip        String   @db.VarChar(15)
+  dt_acesso DateTime @db.Date
+}
+
+model awards {
+  codigo         Int      @id @default(autoincrement())
+  cod_file       Int
+  title          String   @db.VarChar(150)
+  company_name   String   @db.VarChar(100)
+  company_logo   Int
+  descricao      String   @db.VarChar(600)
+  dt_geracao     DateTime @db.Date
+  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_atualizacao DateTime @db.Date
+  filePath       files    @relation("filePath", fields: [cod_file], references: [codigo], onDelete: NoAction, onUpdate: NoAction)
+  fileCompany    files    @relation("fileCompany", fields: [company_logo], references: [codigo], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model backend {
+  codigo         Int      @id @default(autoincrement())
+  nome           String   @db.VarChar(150)
+  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_atualizacao DateTime @db.Date
+}
+
+model certificates {
+  codigo     Int      @id @default(autoincrement())
+  dt_geracao DateTime @db.Date
+  title      String   @db.VarChar(150)
+  company    String   @db.VarChar(150)
+  cod_image  Int
+  cod_file   Int
+  file       files    @relation("file", fields: [cod_file], references: [codigo], onDelete: NoAction, onUpdate: NoAction)
+  image      files    @relation("image", fields: [cod_image], references: [codigo], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model cloud {
+  codigo         Int      @id @default(autoincrement())
+  nome           String   @db.VarChar(150)
+  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_atualizacao DateTime @db.Date
+}
+
+model databases {
+  codigo         Int      @id @default(autoincrement())
+  nome           String   @db.VarChar(150)
+  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_atualizacao DateTime @db.Date
+}
+
+model devops {
+  codigo         Int      @id @default(autoincrement())
+  nome           String   @db.VarChar(150)
+  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_atualizacao DateTime @db.Date
+}
+
+model education {
+  codigo         Int      @id @default(autoincrement())
+  periodo        String   @db.VarChar(250)
+  titulo         String   @db.VarChar(250)
+  empresa        String   @db.VarChar(150)
+  endereco       String   @db.VarChar(250)
+  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_atualizacao DateTime @db.Date
+}
+
+model experience {
+  codigo         Int      @id @default(autoincrement())
+  periodo        String   @db.VarChar(250)
+  titulo         String   @db.VarChar(250)
+  empresa        String   @db.VarChar(150)
+  endereco       String   @db.VarChar(250)
+  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_atualizacao DateTime @db.Date
+}
+
+model files {
+  codigo         Int            @id @default(autoincrement())
+  file_name      String         @db.VarChar(250)
+  file_path      String         @db.VarChar(250)
+  dt_cadastro    DateTime       @default(now()) @db.Date
+  dt_atualizacao DateTime       @db.Date
+  tipo           String?        @db.VarChar(50)
+  filePath       awards[]       @relation("filePath")
+  fileCompany    awards[]       @relation("fileCompany")
+  file           certificates[] @relation("file")
+  image          certificates[] @relation("image")
+  projects       projects[]
+}
+
+model frontend {
+  codigo         Int      @id @default(autoincrement())
+  nome           String   @db.VarChar(150)
+  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_atualizacao DateTime @db.Date
+}
+
+model mobile {
+  codigo         Int      @id @default(autoincrement())
+  nome           String   @db.VarChar(150)
+  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_atualizacao DateTime @db.Date
+}
+
+model projects {
+  codigo         Int      @id @default(autoincrement())
+  cod_image      Int
+  url            String   @db.VarChar(300)
+  link_rep       String   @db.VarChar(300)
+  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_atualizacao DateTime @db.Date
+  files          files    @relation(fields: [cod_image], references: [codigo], onDelete: NoAction, onUpdate: NoAction)
+}
