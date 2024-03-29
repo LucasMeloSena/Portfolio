@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 interface IStyleStack {
-  marginTop: string;
+  margintop: string;
 }
 
 export const ConteudoPrincipal = styled.div<IStyleStack>`
-  margin-top: ${(props) => props.marginTop || "0px"};
+  margin-top: ${(props) => props.margintop || "0px"};
   width: 150px;
   height: 150px;
   border-radius: 10px;

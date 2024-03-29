@@ -15,8 +15,8 @@ function Footer() {
           color={"#FFF"}
           fontSize={"18px"}
           fontWeight={"500"}
-          marginBottom={"0px"}
-          textAlign={"unset"}
+          marginbottom={"0px"}
+          textalign={"unset"}
         />
         <RedirectPage href="/status">
           Clique aqui para ver o STATUS do site!

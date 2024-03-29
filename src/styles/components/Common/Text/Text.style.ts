@@ -4,8 +4,8 @@ interface IText {
   fontSize: string;
   fontWeight: string;
   color: string;
-  marginBottom: string;
-  textAlign: string;
+  marginbottom: string;
+  textalign: string;
 }
 
 export const DefaultText = styled.h4<IText>`
@@ -15,6 +15,6 @@ export const DefaultText = styled.h4<IText>`
   font-style: normal;
   font-weight: ${(props) => props.fontWeight || "500"};
   line-height: 1.2em;
-  margin-bottom: ${(props) => props.marginBottom || "0px"} !important;
-  text-align: ${(props) => props.textAlign || "unset"};
+  margin-bottom: ${(props) => props.marginbottom || "0px"} !important;
+  text-align: ${(props) => props.textalign || "unset"};
 `;

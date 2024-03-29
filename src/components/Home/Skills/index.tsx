@@ -14,8 +14,8 @@ function Skills({ text }: ISkills) {
           color={"#FFF"}
           fontSize={"14px"}
           fontWeight={"300"}
-          marginBottom={"0px"}
-          textAlign={"unset"}
+          marginbottom={"0px"}
+          textalign={"unset"}
         />
       </MainContent>
     </>

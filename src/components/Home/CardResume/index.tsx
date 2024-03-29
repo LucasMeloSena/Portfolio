@@ -17,32 +17,32 @@ function CardResume({ period, jobTitle, company, adress }: ICardResumeData) {
           fontWeight={"300"}
           color={"#fff"}
           text={period}
-          marginBottom={"20px"}
-          textAlign={"unset"}
+          marginbottom={"20px"}
+          textalign={"unset"}
         />
         <Text
           fontSize={"20px"}
           fontWeight={"600"}
           color={"#fff"}
           text={jobTitle}
-          marginBottom={"5px"}
-          textAlign={"unset"}
+          marginbottom={"5px"}
+          textalign={"unset"}
         />
         <Text
           fontSize={"14px"}
           fontWeight={"300"}
           color={"#fff"}
           text={company}
-          marginBottom={"20px"}
-          textAlign={"unset"}
+          marginbottom={"20px"}
+          textalign={"unset"}
         />
         <Text
           fontSize={"14px"}
           fontWeight={"300"}
           color={"#fff"}
           text={adress}
-          marginBottom={"0px"}
-          textAlign={"unset"}
+          marginbottom={"0px"}
+          textalign={"unset"}
         />
       </ContainerCardResume>
     </>

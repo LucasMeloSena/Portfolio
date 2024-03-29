@@ -130,8 +130,8 @@ function Details() {
             color={"#FFF"}
             fontSize={"24px"}
             fontWeight={"600"}
-            marginBottom={"0px"}
-            textAlign={"unset"}
+            marginbottom={"0px"}
+            textalign={"unset"}
           />
           {dataBaseInfo.map((item, index) => (
             <ContainerInfo key={index}>
@@ -140,8 +140,8 @@ function Details() {
                 color={"#FFF"}
                 fontSize={"14px"}
                 fontWeight={"300"}
-                marginBottom={"0px"}
-                textAlign={"unset"}
+                marginbottom={"0px"}
+                textalign={"unset"}
               />
               <CardInfo text={item.detail} />
             </ContainerInfo>
@@ -153,8 +153,8 @@ function Details() {
             color={"#FFF"}
             fontSize={"24px"}
             fontWeight={"600"}
-            marginBottom={"0px"}
-            textAlign={"unset"}
+            marginbottom={"0px"}
+            textalign={"unset"}
           />
           {serverInfo.map((item, index) => (
             <ContainerInfo key={index}>
@@ -163,8 +163,8 @@ function Details() {
                 color={"#FFF"}
                 fontSize={"14px"}
                 fontWeight={"300"}
-                marginBottom={"0px"}
-                textAlign={"unset"}
+                marginbottom={"0px"}
+                textalign={"unset"}
               />
               <CardInfo text={item.detail} />
             </ContainerInfo>

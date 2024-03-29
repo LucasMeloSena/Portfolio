@@ -83,7 +83,7 @@ function Introduction() {
               color={"#FFF"}
               fontWeight={"600"}
               fontSize={"22px"}
-              lineHeight={"20px"}
+              lineheight={"20px"}
             >
               Hey There,
             </DefaultText>
@@ -91,7 +91,7 @@ function Introduction() {
               color={"#FFF"}
               fontWeight={"700"}
               fontSize={"40px"}
-              lineHeight={"30px"}
+              lineheight={"30px"}
             >
               I'm Lucas Sena
             </DefaultText>
@@ -99,7 +99,7 @@ function Introduction() {
               color={"rgba(255, 255, 255, 0.80)"}
               fontWeight={"500"}
               fontSize={"18px"}
-              lineHeight={"20px"}
+              lineheight={"20px"}
             >
               Full Stack Developer
             </DefaultText>

@@ -42,8 +42,8 @@ const Projects = forwardRef<HTMLDivElement, IProjects>((props, ref) => {
           fontSize={"14px"}
           fontWeight={"300"}
           color={"#FFF"}
-          marginBottom={"0px"}
-          textAlign={"unset"}
+          marginbottom={"0px"}
+          textalign={"unset"}
         />
         <ContainerCardWorks>
           {projects.map((item, index) => (

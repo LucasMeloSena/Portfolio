@@ -5,8 +5,8 @@ interface IText {
   fontSize: string;
   fontWeight: string;
   color: string;
-  marginBottom: string;
-  textAlign: string;
+  marginbottom: string;
+  textalign: string;
 }
 
 function Title({
@@ -14,8 +14,8 @@ function Title({
   fontSize,
   fontWeight,
   color,
-  marginBottom,
-  textAlign,
+  marginbottom,
+  textalign,
 }: IText) {
   return (
     <>
@@ -23,8 +23,8 @@ function Title({
         fontWeight={fontWeight}
         fontSize={fontSize}
         color={color}
-        marginBottom={marginBottom}
-        textAlign={textAlign}
+        marginbottom={marginbottom}
+        textalign={textalign}
       >
         {text}
       </DefaultText>

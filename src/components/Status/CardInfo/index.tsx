@@ -14,8 +14,8 @@ function CardInfo({ text }: ICardInfo) {
           color={"#4DA768"}
           fontSize={"12px"}
           fontWeight={"400"}
-          marginBottom={"0px"}
-          textAlign={"unset"}
+          marginbottom={"0px"}
+          textalign={"unset"}
         />
       </ContainerCardInfo>
     </>

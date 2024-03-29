@@ -81,32 +81,32 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props, ref) => {
     {
       nome: "Front End",
       image: ImgFrontend,
-      marginTop: "0px",
+      margintop: "0px",
     },
     {
       nome: "Back End",
       image: ImgBackend,
-      marginTop: "30px",
+      margintop: "30px",
     },
     {
       nome: "Mobile",
       image: ImgMobile,
-      marginTop: "0px",
+      margintop: "0px",
     },
     {
       nome: "Data Base",
       image: ImgDatabase,
-      marginTop: "30px",
+      margintop: "30px",
     },
     {
       nome: "DevOps",
       image: ImgDevops,
-      marginTop: "0px",
+      margintop: "0px",
     },
     {
       nome: "Cloud",
       image: ImgCloud,
-      marginTop: "30px",
+      margintop: "30px",
     },
   ];
 
@@ -122,8 +122,8 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props, ref) => {
             color={"#FFF"}
             fontSize={"16px"}
             fontWeight={"400"}
-            marginBottom={"0px"}
-            textAlign={"unset"}
+            marginbottom={"0px"}
+            textalign={"unset"}
           />
           <MainContent>
             <ContainerPresentationAndSkills>
@@ -139,8 +139,8 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props, ref) => {
                   color={"#FFF"}
                   fontSize={"20px"}
                   fontWeight={"600"}
-                  marginBottom={"10px"}
-                  textAlign={"unset"}
+                  marginbottom={"10px"}
+                  textalign={"unset"}
                 />
                 <ContainerSkill>
                   {containerSkill.map((item, index) => (
@@ -158,7 +158,7 @@ const AboutMe = forwardRef<HTMLDivElement, IAboutMe>((props, ref) => {
               key={index}
               image={item.image}
               nome={item.nome}
-              marginTop={item.marginTop}
+              margintop={item.margintop}
             />
           ))}
         </ContainerFrameStacks>

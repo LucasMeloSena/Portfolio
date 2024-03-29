@@ -38,8 +38,8 @@ function CardAwards({
             color={"#FFF"}
             fontSize={"12px"}
             fontWeight={"400"}
-            marginBottom={"0px"}
-            textAlign={"unset"}
+            marginbottom={"0px"}
+            textalign={"unset"}
           />
         </ContainerTexto>
         <ConstainerDescricao>
@@ -48,16 +48,16 @@ function CardAwards({
             color={"#FFF"}
             fontSize={"16px"}
             fontWeight={"500"}
-            marginBottom={"0px"}
-            textAlign={"unset"}
+            marginbottom={"0px"}
+            textalign={"unset"}
           />
           <Text
             text={descricao}
             color={"#FFF"}
             fontSize={"12px"}
             fontWeight={"400"}
-            marginBottom={"0px"}
-            textAlign={"unset"}
+            marginbottom={"0px"}
+            textalign={"unset"}
           />
         </ConstainerDescricao>
         <ContainerCompany>
@@ -67,8 +67,8 @@ function CardAwards({
             color={"#FFF"}
             fontSize={"13px"}
             fontWeight={"500"}
-            marginBottom={"0px"}
-            textAlign={"unset"}
+            marginbottom={"0px"}
+            textalign={"unset"}
           />
           <BtnView onClick={() => handleClickButtonView(pdf_path)}>
             View

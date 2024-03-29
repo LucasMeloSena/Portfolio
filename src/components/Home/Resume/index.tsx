@@ -82,8 +82,8 @@ const Resume = forwardRef<HTMLDivElement, IResume>((props, ref) => {
                 fontWeight={"700"}
                 color={"#fff"}
                 text={"Acadêmica"}
-                marginBottom={"0px"}
-                textAlign={"unset"}
+                marginbottom={"0px"}
+                textalign={"unset"}
               />
             </ContainerArea>
             {education.map((item, index) => (
@@ -104,8 +104,8 @@ const Resume = forwardRef<HTMLDivElement, IResume>((props, ref) => {
                 fontWeight={"700"}
                 color={"#fff"}
                 text={"Profissional"}
-                marginBottom={"0px"}
-                textAlign={"unset"}
+                marginbottom={"0px"}
+                textalign={"unset"}
               />
             </ContainerArea>
             {experience.map((item, index) => (

@@ -5,7 +5,7 @@ interface TextProps {
   color: string;
   fontSize: string;
   fontWeight: string;
-  lineHeight: string;
+  lineheight: string;
 }
 
 export const MainContainer = styled.div`
@@ -60,7 +60,7 @@ export const DefaultText = styled.h4<TextProps>`
   font-size: ${(props) => props.fontSize || "16px"};
   font-weight: ${(props) => props.fontWeight || "500"};
   font-family: Poppins;
-  line-height: ${(props) => props.lineHeight || "normal"};
+  line-height: ${(props) => props.lineheight || "normal"};
 `;
 
 export const ContainerSocialMedia = styled.div`

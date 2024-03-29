@@ -9,6 +9,7 @@ async function query(queryObject: any) {
     password: process.env.POSTGRES_PASSWORD,
     ssl: getSSLValues(),
   });
+
   try {
     await client.connect();
     const result = await client.query(queryObject);
@@ -25,5 +26,5 @@ export default {
 };
 
 function getSSLValues() {
-  return process.env.NODE_ENV == "development" ? false : true;
+  return process.env.NODE_ENV == "production" ? true : false;
 }

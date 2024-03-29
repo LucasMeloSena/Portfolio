@@ -37,24 +37,24 @@ function CardCertificates({
             color={"#FFF"}
             fontSize={"16px"}
             fontWeight={"500"}
-            marginBottom={"0px"}
-            textAlign={"unset"}
+            marginbottom={"0px"}
+            textalign={"unset"}
           />
           <Text
             text={empresa}
             color={"#FFF"}
             fontSize={"14px"}
             fontWeight={"400"}
-            marginBottom={"10px"}
-            textAlign={"left"}
+            marginbottom={"10px"}
+            textalign={"left"}
           />
           <Text
             text={dataEmissao}
             color={"#FFF"}
             fontSize={"12px"}
             fontWeight={"300"}
-            marginBottom={"0px"}
-            textAlign={"unset"}
+            marginbottom={"0px"}
+            textalign={"unset"}
           />
         </ContainerDados>
       </ContainerCardCertificates>

@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import database from "src/infra/database";
 
-async function acess(req: NextApiRequest, res: NextApiResponse) {
+async function access(req: NextApiRequest, res: NextApiResponse) {
   //@ts-ignore
   req;
 
@@ -22,17 +22,24 @@ async function acess(req: NextApiRequest, res: NextApiResponse) {
         return itemDate === date;
       });
       if (warmAcess.length > 0) {
-        throw new Error("Este usuário já acessou o site hoje!");
+        res
+          .status(403)
+          .send({ allow: 0, message: "Este usuário já acessou o site hoje!" });
+        return;
       }
     }
 
-    await database.query({
+    const result = await database.query({
       text: "INSERT INTO acesso (IP, DT_ACESSO) VALUES ($1, $2)",
       values: [ipAdress, date],
     });
-    res.status(201).send({ message: "Acesso adicionado com sucesso!" });
+    res.status(201).send({
+      rowCount: result.rowCount,
+      allow: 1,
+      message: "Acesso adicionado com sucesso!",
+    });
   } catch (error) {
-    res.status(200).send({ message: (error as Error).message });
+    res.status(500).send({ message: (error as Error).message });
   }
 }
 
@@ -42,5 +49,5 @@ type ResultSearchDatabase = {
 };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  acess(req, res);
+  access(req, res);
 }

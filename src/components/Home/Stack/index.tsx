@@ -8,21 +8,21 @@ import { StaticImageData } from "next/image";
 interface IStack {
   image: StaticImageData;
   nome: string;
-  marginTop: string;
+  margintop: string;
 }
 
-function Stack({ image, nome, marginTop }: IStack) {
+function Stack({ image, nome, margintop }: IStack) {
   return (
     <>
-      <ConteudoPrincipal marginTop={marginTop}>
+      <ConteudoPrincipal margintop={margintop}>
         <ImageStack src={image.src} alt="image-stack" />
         <Text
           text={nome}
           color={"#FFF"}
           fontSize={"16px"}
           fontWeight={"400"}
-          marginBottom={"0px"}
-          textAlign={"unset"}
+          marginbottom={"0px"}
+          textalign={"unset"}
         />
       </ConteudoPrincipal>
     </>

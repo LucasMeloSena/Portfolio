@@ -9,7 +9,9 @@ async function experience(
     //@ts-ignore
     request;
 
-    const experienceResult = await database.query("SELECT * FROM EXPERIENCE ORDER BY CODIGO DESC");
+    const experienceResult = await database.query(
+      "SELECT * FROM EXPERIENCE ORDER BY CODIGO DESC",
+    );
     const experienceValue = experienceResult.rows;
 
     response.status(200).json({

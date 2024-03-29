@@ -32,8 +32,8 @@ function ErrorPage() {
             fontSize={"16px"}
             fontWeight={"400"}
             color={"#FFF"}
-            marginBottom={"0px"}
-            textAlign={"unset"}
+            marginbottom={"0px"}
+            textalign={"unset"}
           />
           <BtnComeBack onClick={handleClickButton}>
             Voltar para a página inicial
