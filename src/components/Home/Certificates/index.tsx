@@ -4,6 +4,7 @@ import {
 } from "src/styles/components/Home/Certificates/Certificates.style";
 import { Title, CardCertificates } from "@/PortfolioUI";
 import { useEffect, useState } from "react";
+import { convertDateToLocaleString } from "src/assets/utils/convert-date";
 require("dotenv").config();
 
 interface ICertificates {
@@ -28,7 +29,7 @@ function Certificates() {
           const result = await response.json();
           for (let item of result.data.certificates) {
             let data: Date = new Date(item.dt_geracao);
-            item.dt_geracao = data.toLocaleDateString();
+            item.dt_geracao = convertDateToLocaleString(data)
           }
           setCertificates(result.data.certificates);
         })

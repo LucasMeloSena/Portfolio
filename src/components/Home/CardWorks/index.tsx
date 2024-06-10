@@ -11,15 +11,15 @@ interface ICardWorks {
 
 function CardWorks({ url, link_rep, file_path }: ICardWorks) {
   //@ts-ignore
-  url;
+  link_rep;
 
-  const handleClickProject = (link_rep: string) => {
-    window.open(link_rep);
+  const handleClickProject = (url: string) => {
+    window.open(url);
   };
 
   return (
     <>
-      <MainContent onClick={() => handleClickProject(link_rep)}>
+      <MainContent onClick={() => handleClickProject(url)}>
         <ImgProject src={file_path} alt="img-project" />
       </MainContent>
     </>

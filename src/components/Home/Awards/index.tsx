@@ -1,5 +1,6 @@
 import { Title, CardAwards } from "@/PortfolioUI";
 import { HTMLAttributes, forwardRef, useEffect, useState } from "react";
+import { convertDateToLocaleString } from "src/assets/utils/convert-date";
 import {
   ContainerAwards,
   ContainerCardAwards,
@@ -30,7 +31,7 @@ const Awards = forwardRef<HTMLDivElement, IAwards>((props, ref) => {
           const result = await response.json();
           for (let item of result.data.awards) {
             let data: Date = new Date(item.dt_geracao);
-            item.dt_geracao = data.toLocaleDateString();
+            item.dt_geracao = convertDateToLocaleString(data)
           }
           setAwards(result.data.awards);
         })
