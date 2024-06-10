@@ -29,7 +29,7 @@ function Certificates() {
           const result = await response.json();
           for (let item of result.data.certificates) {
             let data: Date = new Date(item.dt_geracao);
-            item.dt_geracao = convertDateToLocaleString(data)
+            item.dt_geracao = convertDateToLocaleString(data);
           }
           setCertificates(result.data.certificates);
         })

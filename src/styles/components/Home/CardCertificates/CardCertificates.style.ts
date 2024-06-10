@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const ContainerCardCertificates = styled.div`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  height: 290px;
+  height: 330px;
   width: 280px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   gap: 15px;
   transition: transform 0.3s ease-in-out;
@@ -33,6 +33,7 @@ export const ContainerDados = styled.div`
 
 export const ImageCertificado = styled.img`
   width: 100%;
+  height: 200px;
   border-radius: 20px;
   object-fit: cover;
   &:hover {

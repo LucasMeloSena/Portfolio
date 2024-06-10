@@ -31,7 +31,7 @@ const Awards = forwardRef<HTMLDivElement, IAwards>((props, ref) => {
           const result = await response.json();
           for (let item of result.data.awards) {
             let data: Date = new Date(item.dt_geracao);
-            item.dt_geracao = convertDateToLocaleString(data)
+            item.dt_geracao = convertDateToLocaleString(data);
           }
           setAwards(result.data.awards);
         })

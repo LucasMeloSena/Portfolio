@@ -37,15 +37,15 @@ function CardCertificates({
             color={"#FFF"}
             fontSize={"16px"}
             fontWeight={"500"}
-            marginbottom={"0px"}
+            marginbottom={"10px"}
             textalign={"unset"}
           />
           <Text
             text={empresa}
             color={"#FFF"}
             fontSize={"14px"}
-            fontWeight={"400"}
-            marginbottom={"10px"}
+            fontWeight={"500"}
+            marginbottom={"4px"}
             textalign={"left"}
           />
           <Text
