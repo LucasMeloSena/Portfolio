@@ -1,3 +1,9 @@
+import orchestrator from "src/tests/orchestrator";
+
+beforeAll(async () => {
+  await orchestrator.waitForAllServices();
+});
+
 test("POST to /api/v1/access should return 200", async () => {
   const url = "http://localhost:3000/api/v1/access";
   const requestOptions = {
