@@ -1,4 +1,9 @@
 import database from "src/infra/database";
+import orchestrator from "src/tests/orchestrator";
+
+beforeAll(async () => {
+  await orchestrator.waitForAllServices();
+});
 
 test("GET to /api/v1/awards should return 200", async () => {
   const awardsCount = await database.query("SELECT COUNT(*) FROM AWARDS");

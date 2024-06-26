@@ -1,4 +1,9 @@
 import database from "src/infra/database";
+import orchestrator from "src/tests/orchestrator";
+
+beforeAll(async () => {
+  await orchestrator.waitForAllServices();
+});
 
 test("GET to /api/v1/certificates should return 200", async () => {
   const certificatesCount = await database.query(

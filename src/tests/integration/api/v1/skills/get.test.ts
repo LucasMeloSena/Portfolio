@@ -1,4 +1,9 @@
 import database from "src/infra/database";
+import orchestrator from "src/tests/orchestrator";
+
+beforeAll(async () => {
+  await orchestrator.waitForAllServices();
+});
 
 test("GET to /api/v1/skills should return 200", async () => {
   const frontendCount = await database.query("SELECT COUNT(*) FROM FRONTEND");
