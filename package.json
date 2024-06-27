@@ -6,7 +6,7 @@
   "scripts": {
     "build": "next build",
     "start": "next start",
-    "dev": "npm run services:up && wait:postgres && next dev",
+    "dev": "npm run services:up && npm run wait:postgres && npm run migrations:up && next dev",
     "services:up": "docker compose -f src/infra/compose.yaml up -d",
     "services:stop": "docker compose -f src/infra/compose.yaml stop",
     "services:down": "docker compose -f src/infra/compose.yaml down",
@@ -14,7 +14,8 @@
     "lint:fix": "prettier --write .",
     "test": "npm run services:up && concurrently -n next,jest --hide next -k -s command-jest \"next dev\" \"jest --runInBand --verbose\"",
     "test:watch": "jest --watchAll",
-    "wait:postgres": "tsx ./src/assets/utils/wait-for-postgres.js"
+    "wait:postgres": "tsx ./src/assets/utils/wait-for-postgres.js",
+    "migrations:up": "npx prisma migrate deploy"
   },
   "author": "",
   "license": "ISC",

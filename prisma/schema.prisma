@@ -21,7 +21,7 @@ model awards {
   company_logo   Int
   descricao      String   @db.VarChar(600)
   dt_geracao     DateTime @db.Date
-  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_cadastro    DateTime @db.Date
   dt_atualizacao DateTime @db.Date
   filePath       files    @relation("filePath", fields: [cod_file], references: [codigo], onDelete: NoAction, onUpdate: NoAction)
   fileCompany    files    @relation("fileCompany", fields: [company_logo], references: [codigo], onDelete: NoAction, onUpdate: NoAction)
@@ -30,7 +30,7 @@ model awards {
 model backend {
   codigo         Int      @id @default(autoincrement())
   nome           String   @db.VarChar(150)
-  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_cadastro    DateTime @db.Date
   dt_atualizacao DateTime @db.Date
 }
 
@@ -48,21 +48,21 @@ model certificates {
 model cloud {
   codigo         Int      @id @default(autoincrement())
   nome           String   @db.VarChar(150)
-  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_cadastro    DateTime @db.Date
   dt_atualizacao DateTime @db.Date
 }
 
 model databases {
   codigo         Int      @id @default(autoincrement())
   nome           String   @db.VarChar(150)
-  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_cadastro    DateTime @db.Date
   dt_atualizacao DateTime @db.Date
 }
 
 model devops {
   codigo         Int      @id @default(autoincrement())
   nome           String   @db.VarChar(150)
-  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_cadastro    DateTime @db.Date
   dt_atualizacao DateTime @db.Date
 }
 
@@ -72,7 +72,7 @@ model education {
   titulo         String   @db.VarChar(250)
   empresa        String   @db.VarChar(150)
   endereco       String   @db.VarChar(250)
-  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_cadastro    DateTime @db.Date
   dt_atualizacao DateTime @db.Date
 }
 
@@ -82,7 +82,7 @@ model experience {
   titulo         String   @db.VarChar(250)
   empresa        String   @db.VarChar(150)
   endereco       String   @db.VarChar(250)
-  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_cadastro    DateTime @db.Date
   dt_atualizacao DateTime @db.Date
 }
 
@@ -90,7 +90,7 @@ model files {
   codigo         Int            @id @default(autoincrement())
   file_name      String         @db.VarChar(250)
   file_path      String         @db.VarChar(250)
-  dt_cadastro    DateTime       @default(now()) @db.Date
+  dt_cadastro    DateTime       @db.Date
   dt_atualizacao DateTime       @db.Date
   tipo           String?        @db.VarChar(50)
   filePath       awards[]       @relation("filePath")
@@ -103,14 +103,14 @@ model files {
 model frontend {
   codigo         Int      @id @default(autoincrement())
   nome           String   @db.VarChar(150)
-  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_cadastro    DateTime @db.Date
   dt_atualizacao DateTime @db.Date
 }
 
 model mobile {
   codigo         Int      @id @default(autoincrement())
-  nome           String   @db.VarChar(150)
-  dt_cadastro    DateTime @default(now()) @db.Date
+  nome           String   @db.VarChar(100)
+  dt_cadastro    DateTime @db.Date
   dt_atualizacao DateTime @db.Date
 }
 
@@ -119,7 +119,7 @@ model projects {
   cod_image      Int
   url            String   @db.VarChar(300)
   link_rep       String   @db.VarChar(300)
-  dt_cadastro    DateTime @default(now()) @db.Date
+  dt_cadastro    DateTime @db.Date
   dt_atualizacao DateTime @db.Date
   files          files    @relation(fields: [cod_image], references: [codigo], onDelete: NoAction, onUpdate: NoAction)
 }
