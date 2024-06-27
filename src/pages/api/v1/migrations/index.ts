@@ -35,7 +35,7 @@ async function migrations(request: NextApiRequest, response: NextApiResponse) {
       }
 
     if (request.method == "GET") {
-      const statusCommand = 'npx prisma migrate status --schema=./prisma/schema.prisma';
+      const statusCommand = 'npx prisma migrate status';
       const statusResult = await runMigrations(statusCommand);
       const findMigrations = statusResult.search("Database schema is up to date")
       if (findMigrations != -1) {
@@ -47,7 +47,7 @@ async function migrations(request: NextApiRequest, response: NextApiResponse) {
     } 
 
     if (request.method == "POST") {      
-      const deployCommand = 'npx prisma migrate deploy --schema=./prisma/schema.prisma';
+      const deployCommand = 'npx prisma migrate deploy';
       const deployResult = await runMigrations(deployCommand);
       const findMigrations = deployResult.search("No pending migrations to apply.")
       const applyMigrations = deployResult.search("migrations have been successfully applied.")
