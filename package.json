@@ -4,7 +4,7 @@
   "description": "Repository that seeks to showcase my knowledge and skills",
   "main": "index.js",
   "scripts": {
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "dev": "npm run services:up && npm run wait:postgres && npm run migrations:up && next dev",
     "services:up": "docker compose -f src/infra/compose.yaml up -d",
