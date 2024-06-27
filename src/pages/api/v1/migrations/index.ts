@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "src/infra/prisma";
-import validator from "src/assets/utils/validator";
 import { promisify } from "util";
 import { exec } from "child_process";
+import validator from "src/assets/utils/validator";
 
 export enum MigrationStatus {
   Ok = 0,
