@@ -2,6 +2,7 @@ import orchestrator from "src/tests/orchestrator";
 
 beforeAll(async () => {
   await orchestrator.waitForAllServices();
+  await orchestrator.waitForMountedDatabase()
 });
 
 test("POST to /api/v1/access should return 200", async () => {

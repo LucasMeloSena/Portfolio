@@ -3,6 +3,7 @@ import orchestrator from "src/tests/orchestrator";
 
 beforeAll(async () => {
   await orchestrator.waitForAllServices();
+  await orchestrator.waitForMountedDatabase()
 });
 
 test("GET to /api/v1/experience should return 200", async () => {
