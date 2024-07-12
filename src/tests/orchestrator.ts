@@ -38,6 +38,11 @@ async function waitForMountedDatabase() {
         "Content-Type": "application/json",
       },
     });
+
+    if (response.status != 200) {
+      throw Error("Error during running migrations.");
+    }
+
     const result = await response.json();
     if (result.status == MigrationStatus.Pending) {
       throw Error("Waiting for complete migrations.");

@@ -6,6 +6,11 @@ jobs:
   jest:
     name: Jest Ubuntu
     runs-on: ubuntu-latest
+
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      TOKEN: ${{ secrets.TOKEN }}
+
     steps:
       - uses: actions/checkout@v4
 

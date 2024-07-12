@@ -27,6 +27,7 @@ async function runMigrations(command: string) {
     }
     return stdout;
   } catch (error) {
+    console.log(error);
     const err = error as ExecError;
     if (err.stdout.includes("have not yet been applied")) {
       return err.stdout;
