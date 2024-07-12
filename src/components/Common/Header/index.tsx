@@ -13,9 +13,11 @@ import { ImgLogo } from "src/assets/img/index";
 import { Icon } from "@/PortfolioUI";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useReward } from "react-rewards";
+import Link from "next/link";
 require("dotenv").config();
 
 interface IHeader {
+  // eslint-disable-next-line no-unused-vars
   handleClickScroll: (target: string) => void;
 }
 
@@ -67,9 +69,9 @@ function Header({ handleClickScroll }: IHeader) {
     <>
       <MainContent className="navbar navbar-expand-lg bg-body-tertiary">
         <ContainerResponsive className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" href="/">
             <Logo src={ImgLogo.src} alt="logo" />
-          </a>
+          </Link>
           <BtnHeaderResponsive
             className="navbar-toggler"
             type="button"

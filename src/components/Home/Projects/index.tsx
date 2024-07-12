@@ -60,4 +60,6 @@ const Projects = forwardRef<HTMLDivElement, IProjects>((props, ref) => {
   );
 });
 
+Projects.displayName = "Projects";
+
 export default Projects;

@@ -5,12 +5,13 @@ function validateToken(token?: string) {
     throw Error(
       "Token inválido! Você deve fornecer um token no formato correto.",
     );
-  }
-  else if (token != realToken) {
+  } else if (token != realToken) {
     throw Error("O token inserido é inválido. Por favor, tente novamente!");
   }
 }
 
-export default {
+const validator = {
   validateToken,
 };
+
+export default validator;

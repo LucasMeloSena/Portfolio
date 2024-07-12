@@ -93,7 +93,7 @@ function Introduction() {
               fontSize={"40px"}
               lineheight={"30px"}
             >
-              I'm Lucas Sena
+              I&apos;m Lucas Sena
             </DefaultText>
             <DefaultText
               color={"rgba(255, 255, 255, 0.80)"}

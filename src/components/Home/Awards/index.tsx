@@ -64,4 +64,6 @@ const Awards = forwardRef<HTMLDivElement, IAwards>((props, ref) => {
   );
 });
 
+Awards.displayName = "Awards";
+
 export default Awards;

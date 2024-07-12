@@ -17,9 +17,6 @@ const LineChart = () => {
   const [novembro, setNovembro] = useState<number>(0);
   const [dezembro, setDezembro] = useState<number>(0);
 
-  const chartRef = useRef<HTMLCanvasElement | null>(null);
-  let chart: Chart;
-
   async function getTotalAccessMonth() {
     const endpoint = process.env.ENDPOINT || "";
     await fetch(`${endpoint}/api/v1/total-access`, {
@@ -45,7 +42,11 @@ const LineChart = () => {
       });
   }
 
+  const chartRef = useRef<HTMLCanvasElement | null>(null);
+
   useEffect(() => {
+    let chart: Chart;
+
     function renderChart() {
       if (chartRef.current) {
         const ctx = chartRef.current.getContext("2d");
@@ -129,8 +130,10 @@ const LineChart = () => {
     }
     getTotalAccessMonth();
     renderChart();
+
+    const currentChartRef = chartRef.current;
     return () => {
-      if (chartRef.current) {
+      if (currentChartRef) {
         chart.destroy();
       }
     };
