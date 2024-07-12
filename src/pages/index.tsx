@@ -29,7 +29,6 @@ function Home() {
   }, []);
 
   const scrollToComponent = (target: string) => {
-    console.log(target);
     switch (target) {
       case "SOBRE MIM":
         if (aboutMeRef.current) {

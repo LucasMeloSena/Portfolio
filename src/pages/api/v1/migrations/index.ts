@@ -5,8 +5,11 @@ import { exec } from "child_process";
 import validator from "src/assets/utils/validator";
 
 export enum MigrationStatus {
+  // eslint-disable-next-line no-unused-vars
   Ok = 0,
+  // eslint-disable-next-line no-unused-vars
   Pending = 1,
+  // eslint-disable-next-line no-unused-vars
   Applied = 2,
 }
 
@@ -24,6 +27,7 @@ async function runMigrations(command: string) {
     }
     return stdout;
   } catch (error) {
+    console.log(error);
     const err = error as ExecError;
     if (err.stdout.includes("have not yet been applied")) {
       return err.stdout;
@@ -46,19 +50,15 @@ async function migrations(request: NextApiRequest, response: NextApiResponse) {
       const statusCommand = "npx prisma migrate status";
       const statusResult = await runMigrations(statusCommand);
       if (statusResult.includes("Database schema is up to date")) {
-        return response
-          .status(200)
-          .json({
-            message: "Database schema is up to date",
-            status: MigrationStatus.Ok,
-          });
+        return response.status(200).json({
+          message: "Database schema is up to date",
+          status: MigrationStatus.Ok,
+        });
       } else {
-        return response
-          .status(200)
-          .json({
-            message: "Migrations pending...",
-            status: MigrationStatus.Pending,
-          });
+        return response.status(200).json({
+          message: "Migrations pending...",
+          status: MigrationStatus.Pending,
+        });
       }
     }
 
@@ -72,31 +72,25 @@ async function migrations(request: NextApiRequest, response: NextApiResponse) {
         "migrations have been successfully applied.",
       );
       if (findMigrations != -1) {
-        return response
-          .status(200)
-          .json({
-            message: "No pending migrations to apply.",
-            status: MigrationStatus.Ok,
-          });
+        return response.status(200).json({
+          message: "No pending migrations to apply.",
+          status: MigrationStatus.Ok,
+        });
       } else if (applyMigrations != -1) {
-        return response
-          .status(200)
-          .json({
-            message: "Migrations have been successfully applied.",
-            status: MigrationStatus.Applied,
-          });
+        return response.status(200).json({
+          message: "Migrations have been successfully applied.",
+          status: MigrationStatus.Applied,
+        });
       } else {
         throw Error("Error during running migrations.");
       }
     }
   } catch (err) {
-    return response
-      .status(500)
-      .json({
-        message:
-          (err as Error).message ||
-          "Erro interno no servidor. Por favor, tente novamente mais tarde!",
-      });
+    return response.status(500).json({
+      message:
+        (err as Error).message ||
+        "Erro interno no servidor. Por favor, tente novamente mais tarde!",
+    });
   } finally {
     prisma.$disconnect();
   }

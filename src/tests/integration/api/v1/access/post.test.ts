@@ -2,7 +2,7 @@ import orchestrator from "src/tests/orchestrator";
 
 beforeAll(async () => {
   await orchestrator.waitForAllServices();
-  await orchestrator.waitForMountedDatabase()
+  await orchestrator.waitForMountedDatabase();
 });
 
 test("POST to /api/v1/access should return 200", async () => {
@@ -18,10 +18,6 @@ test("POST to /api/v1/access should return 200", async () => {
   const result = await fetch(url, requestOptions);
   const responseBody = await result.json();
 
-  if (responseBody.allow == 0) {
-    expect(result.status).toBe(403);
-  } else if (responseBody.allow == 1) {
-    expect(responseBody.rowCount).toBe(1);
-    expect(result.status).toBe(201);
-  }
+  expect(result.status).toBe(responseBody.allow === 0 ? 403 : 201);
+  expect(responseBody.rowCount).toBe(responseBody.allow == 1 ? 1 : 0);
 });

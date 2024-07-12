@@ -21,10 +21,12 @@ async function query(queryObject: any) {
   }
 }
 
-export default {
-  query: query,
-};
-
 function getSSLValues() {
   return process.env.NODE_ENV == "production" ? true : false;
 }
+
+const database = {
+  query,
+};
+
+export default database;

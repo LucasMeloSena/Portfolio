@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Helmet>
         <title>Dev. Lucas Sena</title>
         <link rel="icon" type="image/x-icon" href={Favicon.src}></link>
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
@@ -19,7 +20,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
           crossOrigin="anonymous"
-        ></script>
+          async
+        />
       </Helmet>
     </>
   );

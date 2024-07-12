@@ -124,4 +124,6 @@ const Resume = forwardRef<HTMLDivElement, IResume>((props, ref) => {
   );
 });
 
+Resume.displayName = "Resume";
+
 export default Resume;

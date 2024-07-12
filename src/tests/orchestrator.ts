@@ -4,15 +4,12 @@ import { MigrationStatus } from "src/pages/api/v1/migrations";
 async function waitForAllServices() {
   const fetchStatusPage = async () => {
     const url = "http://localhost:3000/api/v1/status";
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw Error(`HTTP Error ${response.status}`);
-      }
-      await response.json();
-    } catch (err) {
-      throw err;
+
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw Error(`HTTP Error ${response.status}`);
     }
+    await response.json();
   };
 
   const waitForWebServer = async () => {
@@ -33,20 +30,22 @@ async function waitForAllServices() {
 async function waitForMountedDatabase() {
   const playMigrations = async () => {
     const url = "http://localhost:3000/api/v1/migrations";
-    try {
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      });
-      const result = await response.json();
-      if (result.status == MigrationStatus.Pending) {
-        throw Error("Waiting for complete migrations.")
-      }
-    } catch (err) {
-      throw err;
+
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.TOKEN}`,
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.status != 200) {
+      throw Error("Error during running migrations.");
+    }
+
+    const result = await response.json();
+    if (result.status == MigrationStatus.Pending) {
+      throw Error("Waiting for complete migrations.");
     }
   };
 
@@ -65,7 +64,9 @@ async function waitForMountedDatabase() {
   await waitForMigrations();
 }
 
-export default {
+const orchestrator = {
   waitForAllServices,
-  waitForMountedDatabase
+  waitForMountedDatabase,
 };
+
+export default orchestrator;

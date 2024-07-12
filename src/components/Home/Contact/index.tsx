@@ -143,4 +143,6 @@ const Contact = forwardRef<HTMLDivElement, IContact>((props, ref) => {
   );
 });
 
+Contact.displayName = "Contact";
+
 export default Contact;
